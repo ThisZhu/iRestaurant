@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">iRestaurant</string>
+    <string name="restaurant_name">我的餐厅</string>
+    <string name="restaurant_motto">客户就是上帝</string>
+    <string name="foryou">—— 为你推荐 ——</string>
+    <string name="food1">推荐菜1</string>
+    <string name="food2">推荐菜2</string>
+    <string name="food3">推荐菜3</string>
+    <string name="food4">推荐菜4</string>
+    <string name="food5">推荐菜5</string>
+    <string name="food1_description">菜品描述1</string>
+    <string name="food2_description"> 菜品描述2 </string>
+    <string name="food3_description"> 菜品描述3 </string>
+    <string name="food4_description"> 菜品描述4 </string>
+    <string name="food5_description"> 菜品描述5 </string>
 </resources>
