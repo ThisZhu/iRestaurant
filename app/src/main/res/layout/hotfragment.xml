@@ -207,10 +207,35 @@
                 </FrameLayout>
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+    <FrameLayout
         android:layout_marginTop="5dp"
         android:background="@color/lightgray"
         android:layout_width="match_parent"
-        android:layout_height="10dp"/>
+        android:layout_height="40dp">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+        <LinearLayout
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+        <TextView
+            android:id="@+id/text_notice"
+            android:textSize="11dp"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </FrameLayout>
 </LinearLayout>
 </android.support.v4.widget.SwipeRefreshLayout>
