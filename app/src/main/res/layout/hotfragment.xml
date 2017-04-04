@@ -228,14 +228,136 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"/>
         <TextView
-            android:id="@+id/text_notice"
+            android:id="@+id/text_discount"
             android:textSize="11dp"
             android:textStyle="italic"
             android:layout_gravity="center"
             android:textColor="@color/black"
-            android:text="@string/notice"
+            android:text="@string/discount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/framelayout_icon_seat_order"
+                android:layout_gravity="top|center_horizontal"
+                android:background="@android:drawable/ic_menu_recent_history"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+            <FrameLayout
+                android:layout_gravity="center"
+                android:background="@drawable/shape_corner_circular"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+            </FrameLayout>
+            <TextView
+                android:id="@+id/text_seat_order"
+                android:text="@string/seat_order"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/framelayout_icon_food_order"
+                android:layout_gravity="top|center_horizontal"
+                android:background="@android:drawable/ic_menu_compass"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_corner_circular"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+            </FrameLayout>
+            <TextView
+                android:id="@+id/text_food_order"
+                android:text="@string/food_order"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/framelayout_icon_hot_review"
+                android:layout_gravity="top|center_horizontal"
+                android:background="@android:drawable/ic_menu_directions"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_corner_circular"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+            </FrameLayout>
+            <TextView
+                android:id="@+id/text_hot_review"
+                android:text="@string/hot_review"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:background="@color/lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <FrameLayout
+            android:id="@+id/framelayout_icon_share"
+            android:background="@android:drawable/ic_menu_agenda"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+        <TextView
+            android:id="@+id/text_about_restaurant"
+            android:text="@string/about_restaurant"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/text_notice"
+            android:text="@string/notice"
+            android:textSize="10dp"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </ListView>
 </LinearLayout>
 </android.support.v4.widget.SwipeRefreshLayout>

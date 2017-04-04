@@ -14,4 +14,9 @@
     <string name="food4_description"> 菜品描述4 </string>
     <string name="food5_description"> 菜品描述5 </string>
     <string name="notice">公告条例，请注意了,请注意了，请注意了，请注意了</string>
+    <string name="seat_order">订座</string>
+    <string name="food_order">订菜</string>
+    <string name="hot_review">热评</string>
+    <string name="about_restaurant">关于我的餐厅</string>
+    <string name="discount">优惠，优惠，请注意，优惠来了</string>
 </resources>
