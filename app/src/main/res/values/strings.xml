@@ -19,4 +19,9 @@
     <string name="hot_review">热评</string>
     <string name="about_restaurant">关于我的餐厅</string>
     <string name="discount">优惠，优惠，请注意，优惠来了</string>
+    <string name="my_order">我的订单</string>
+    <string name="guess_you_like">猜你喜欢</string>
+    <string name="guess_you_like_food_name">猜你喜欢的菜品</string>
+    <string name="guess_you_like_food_description">猜你喜欢的菜品描述，描述，描述，描述,描述，描述,描述！！！</string>
+    <string name="guess_you_like_food_description_collectios">收藏人数:13</string>
 </resources>

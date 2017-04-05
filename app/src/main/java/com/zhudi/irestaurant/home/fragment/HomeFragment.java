@@ -15,7 +15,7 @@ import com.zhudi.irestaurant.home.view.IhomeView;
 public class HomeFragment extends Fragment implements IhomeView{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View view=inflater.inflate(R.layout.hotfragment,container,false);
+        View view=inflater.inflate(R.layout.hot_fragment,container,false);
         return view;
     }
     @Override
