@@ -354,12 +354,12 @@
                 android:layout_height="wrap_content" />
         </FrameLayout>
         <android.support.design.widget.TabLayout
-            android:id="@+id/tablayout"
+            android:id="@+id/tablayout_hot_fragment"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             />
         <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
+            android:id="@+id/viewpager_hot_fragment"
             android:layout_width="match_parent"
             android:layout_height="0px">
         </android.support.v4.view.ViewPager>

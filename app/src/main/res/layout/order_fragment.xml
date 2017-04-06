@@ -16,9 +16,11 @@
         android:layout_width="match_parent"
         android:layout_height="0.2dp"/>
     <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout_order_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_order_fragment"
         android:layout_width="match_parent"
         android:layout_height="0px"/>
 </LinearLayout>
