@@ -28,6 +28,8 @@
     <string name="order_doing">订单进行中</string>
     <string name="seat">桌位 ：</string>
     <string name="seat_count">15号/11人桌</string>
+    <string name="date">时间</string>
+    <string name="date_details">3月12日15:00\n~3月12日16:00</string>
     <string name="people">人数 ：</string>
     <string name="people_count">10</string>
     <string name="food_name">菜品 ：</string>
@@ -49,4 +51,5 @@
     <string name="time_conform">3月29日 17:22</string>
     <string name="warn">——温馨提醒——</string>
     <string name="warn_details">\n\n\t\t亲爱的客人：\n\n\t\t\t\t\t请您在有效的时间到餐厅进行就餐，祝您用餐愉快！\n\n</string>
+    <string name="order_details">订单详情</string>
 </resources>
