@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp">
         <com.zhudi.irestaurant.mine.view.CircleImageView
+            android:id="@+id/circleimageview_no_sign"
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="35dp"
             android:foreground="@drawable/shape_corner_circular_stroke"
@@ -16,6 +17,7 @@
             android:layout_width="80dp"
             android:layout_height="80dp" />
         <TextView
+            android:id="@+id/textview_sign_register"
             android:text="@string/sign_register"
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="140dp"
@@ -34,11 +36,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <ImageView
+            android:id="@+id/icon_help"
             android:layout_gravity="center_vertical"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/abc_btn_radio_material" />
         <TextView
+            android:id="@+id/textview_help"
             android:text="@string/help"
             android:textColor="@color/blackdefine"
             android:textSize="17dp"
@@ -54,6 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.4dp"/>
         <TextView
+            android:id="@+id/icon_details_help"
             android:text="@string/icon_details"
             android:gravity="center"
             android:textSize="27dp"
@@ -67,11 +72,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <ImageView
+            android:id="@+id/icon_set_up"
             android:layout_gravity="center_vertical"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/abc_btn_radio_material" />
         <TextView
+            android:id="@+id/textview_set_up"
             android:text="@string/set_up"
             android:textColor="@color/blackdefine"
             android:textSize="17dp"
@@ -87,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="0.4dp"/>
         <TextView
+            android:id="@+id/icon_details_set_up"
             android:text="@string/icon_details"
             android:gravity="center"
             android:textSize="27dp"
@@ -100,11 +108,13 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <ImageView
+            android:id="@+id/icon_share"
             android:layout_gravity="center_vertical"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:background="@drawable/abc_btn_radio_material" />
         <TextView
+            android:id="@+id/textview_share_app"
             android:text="@string/share_app"
             android:textColor="@color/blackdefine"
             android:textSize="17dp"
@@ -114,6 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="35dp" />
         <TextView
+            android:id="@+id/icon_details_share"
             android:text="@string/icon_details"
             android:gravity="center"
             android:textSize="27dp"
@@ -126,6 +137,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"/>
     <TextView
+        android:id="@+id/textview_version"
         android:text="@string/version"
         android:textSize="15dp"
         android:textColor="@color/black"

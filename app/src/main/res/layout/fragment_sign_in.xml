@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/framelayout_beijing"
+        android:background="@drawable/beijing"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <com.zhudi.irestaurant.mine.view.CircleImageView
+            android:id="@+id/circleimageview_sign_in"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="35dp"
+            android:foreground="@drawable/shape_corner_circular_stroke"
+            android:src="@drawable/touxiang2"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <TextView
+            android:id="@+id/textview_user_name"
+            android:text="@string/user_name"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="130dp"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textview_user_description"
+            android:text="@string/user_description"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="160dp"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+    <FrameLayout
+        android:background="@color/lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <FrameLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/icon_coupon"
+            android:layout_gravity="center_vertical"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/abc_btn_radio_material" />
+        <TextView
+            android:id="@+id/textview_coupon"
+            android:text="@string/coupon"
+            android:textColor="@color/blackdefine"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <LinearLayout
+            android:layout_marginLeft="35dp"
+            android:layout_gravity="bottom"
+            android:background="@color/blackdefine"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"/>
+        <TextView
+            android:id="@+id/icon_details_coupon"
+            android:text="@string/coupon_details"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:layout_gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/icon_my_review"
+            android:layout_gravity="center_vertical"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/abc_btn_radio_material" />
+        <TextView
+            android:id="@+id/textview_my_review"
+            android:text="@string/my_review"
+            android:textColor="@color/blackdefine"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <LinearLayout
+            android:layout_marginLeft="35dp"
+            android:layout_gravity="bottom"
+            android:background="@color/blackdefine"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"/>
+        <TextView
+            android:id="@+id/icon_details_my_review"
+            android:text="@string/icon_details"
+            android:gravity="center"
+            android:textSize="27dp"
+            android:layout_gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/icon_my_collection"
+            android:layout_gravity="center_vertical"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/abc_btn_radio_material" />
+        <TextView
+            android:id="@+id/textview_my_collection"
+            android:text="@string/my_collection"
+            android:textColor="@color/blackdefine"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <LinearLayout
+            android:layout_marginLeft="35dp"
+            android:layout_gravity="bottom"
+            android:background="@color/blackdefine"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"/>
+        <TextView
+            android:id="@+id/icon_details_my_collection"
+            android:text="@string/icon_details"
+            android:gravity="center"
+            android:textSize="27dp"
+            android:layout_gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/icon_my_address"
+            android:layout_gravity="center_vertical"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/abc_btn_radio_material" />
+        <TextView
+            android:id="@+id/textview_my_address"
+            android:text="@string/my_address"
+            android:textColor="@color/blackdefine"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/icon_details_my_address"
+            android:text="@string/icon_details"
+            android:gravity="center"
+            android:textSize="27dp"
+            android:layout_gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:background="@color/lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <FrameLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/icon_help_sign_in"
+            android:layout_gravity="center_vertical"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/abc_btn_radio_material" />
+        <TextView
+            android:id="@+id/textview_help_sign_in"
+            android:text="@string/help"
+            android:textColor="@color/blackdefine"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <LinearLayout
+            android:layout_marginLeft="35dp"
+            android:layout_gravity="bottom"
+            android:background="@color/blackdefine"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"/>
+        <TextView
+            android:id="@+id/icon_details_help_sign_in"
+            android:text="@string/icon_details"
+            android:gravity="center"
+            android:textSize="27dp"
+            android:layout_gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/icon_set_up_sign_in"
+            android:layout_gravity="center_vertical"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/abc_btn_radio_material" />
+        <TextView
+            android:id="@+id/textview_set_up_sign_in"
+            android:text="@string/set_up"
+            android:textColor="@color/blackdefine"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <LinearLayout
+            android:layout_marginLeft="35dp"
+            android:layout_gravity="bottom"
+            android:background="@color/blackdefine"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"/>
+        <TextView
+            android:id="@+id/icon_details_set_up_sign_in"
+            android:text="@string/icon_details"
+            android:gravity="center"
+            android:textSize="27dp"
+            android:layout_gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/icon_share_sign_in"
+            android:layout_gravity="center_vertical"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/abc_btn_radio_material" />
+        <TextView
+            android:id="@+id/textview_share_app_sign_in"
+            android:text="@string/share_app"
+            android:textColor="@color/blackdefine"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/icon_details_share_sign_in"
+            android:text="@string/icon_details"
+            android:gravity="center"
+            android:textSize="27dp"
+            android:layout_gravity="right"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:background="@color/lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <TextView
+        android:id="@+id/textview_sign_out"
+        android:text="@string/sign_out"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
