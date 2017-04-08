@@ -104,5 +104,11 @@
     <string name="forget_password">忘记密码？</string>
     <string name="register">新用户注册</string>
     <string name="quick_login">快捷登录</string>
+    <string name="password_login">密码登录</string>
+    <string name="get_message_code">获取验证码</string>
+    <string name="back">\t\u003c \t返回</string>
+    <string name="verification_phone_number">验证手机号码</string>
+    <string name="message_code_decription">我们已经给你的手机号码15007596513发送了一条验证短信</string>
+    <string name="input_message_code">输入短信验证码</string>
 </resources>
 

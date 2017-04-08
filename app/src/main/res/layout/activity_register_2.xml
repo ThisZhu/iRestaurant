@@ -1,38 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightgray"
-    android:orientation="vertical">
-    <LinearLayout
+    android:background="@color/lightgray">
+    <RelativeLayout
+        android:id="@+id/relativelayout_back"
         android:background="@color/white"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <TextView
-            android:id="@+id/texview_retrieve_password"
-            android:text="@string/retrieve_password"
+            android:id="@+id/texview_back"
+            android:text="@string/back"
             android:textColor="@color/black"
             android:gravity="center"
+            android:background="@color/white"
             android:textSize="18dp"
             android:layout_width="wrap_content"
             android:layout_height="50dp" />
-    </LinearLayout>
+        <TextView
+            android:id="@+id/texview_verification_phone_number"
+            android:text="@string/input_message_code"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
     <TextView
         android:id="@+id/textview_message_code_decription"
         android:text="@string/message_code_decription"
         android:gravity="center"
         android:padding="15dp"
+        android:layout_below="@+id/relativelayout_back"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
     <FrameLayout
+        android:id="@+id/framelayout_message_code"
+        android:layout_below="@+id/textview_message_code_decription"
         android:background="@color/white"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:layout_width="match_parent"
-        android:layout_height="45dp">
+        android:layout_height="50dp">
         <EditText
             android:id="@+id/edittext_please_input_message_code"
             android:text="@string/please_input_message_code"
@@ -52,18 +65,17 @@
             android:layout_width="80dp"
             android:layout_height="match_parent" />
     </FrameLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"/>
     <TextView
         android:id="@+id/textview_next_step"
         android:text="@string/next_step"
         android:textColor="@color/black"
         android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/framelayout_message_code"
         android:gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/shape_button_rectange"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
-</LinearLayout>
+    </RelativeLayout>
