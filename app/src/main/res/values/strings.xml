@@ -110,5 +110,11 @@
     <string name="verification_phone_number">验证手机号码</string>
     <string name="message_code_decription">我们已经给你的手机号码15007596513发送了一条验证短信</string>
     <string name="input_message_code">输入短信验证码</string>
+    <string name="time_review">2017.03.22</string>
+    <string name="comprehensive_score">综合评分：</string>
+    <string name="service_score">服务：</string>
+    <string name="food_score">菜品：</string>
+    <string name="food_names">黄焖鸡，金针菇</string>
+    <string name="my_review_details">这家餐厅的服务真的没法说，菜又那么好吃，值得推荐！</string>
 </resources>
 

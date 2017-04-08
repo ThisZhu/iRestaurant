@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_gravity="top"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@id/textview_user_name"
+            android:text="@string/user_name"
+            android:gravity="center"
+            android:textSize="17dp"
+            android:paddingLeft="25dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textview_time_review"
+            android:text="@string/time_review"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/textview_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_marginLeft="10dp"
+            android:progressTint="@color/blue"
+            android:layout_toRightOf="@+id/textview_time_review"
+            android:numStars="5"
+            android:rating="2"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:id="@+id/line1"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textview_time_review"
+            android:layout_marginRight="15dp"
+            android:layout_alignLeft="@+id/textview_time_review"
+            android:background="@color/blackdefine"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"/>
+        <TextView
+            android:id="@+id/textview_my_review_details"
+            android:text="@string/my_review_details"
+            android:textColor="@color/black"
+            android:layout_alignLeft="@+id/textview_time_review"
+            android:layout_below="@+id/line1"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:id="@+id/line2"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textview_my_review_details"
+            android:layout_alignLeft="@+id/textview_time_review"
+            android:background="@color/blackdefine"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"/>
+        <ImageView
+            android:id="@+id/icon_good_food"
+            android:background="@color/blackdefine"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/line2"
+            android:layout_alignLeft="@+id/textview_my_review_details"
+            android:layout_width="15dp"
+            android:layout_height="15dp" />
+        <TextView
+            android:id="@+id/textview_food_names"
+            android:text="@string/food_names"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/icon_good_food"
+            android:layout_marginLeft="10dp"
+            android:textSize="11dp"
+            android:gravity="center_vertical|left"
+            android:layout_below="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    </FrameLayout>
