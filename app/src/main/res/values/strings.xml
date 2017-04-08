@@ -66,4 +66,16 @@
     <string name="my_collection">我的收藏</string>
     <string name="my_address">我的地址</string>
     <string name="sign_out">退出登录</string>
+    <string name="retrieve_password">\t\u003c \t找回密码</string><!--特殊符号需要使用对应unicode字符集代替，就如本例的<符号-->
+    <string name="please_input_phone">请输入手机号码</string>
+    <string name="please_input_code">请输入验证码</string>
+    <string name="next_one">换</string>
+    <string name="next_step">下一步</string>
+    <string name="resend">重新发送</string>
+    <string name="please_input_message_code">请输入短信验证码</string>
+    <string name="please_input_new_password">请输入新密码</string>
+    <string name="please_input_new_password_again">请重新输入</string>
+    <string name="retrieve_password_successfully">密码设置成功!</string>
+    <string name="ensure">确定</string>
 </resources>
+
