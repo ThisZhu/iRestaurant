@@ -99,5 +99,10 @@
     <string name="waiting_check">检查更新中，请稍后...</string>
     <string name="check_finish_1">检查完成，已是最新版本</string>
     <string name="check_finish_2">发现新版本，是否更新？</string>
+    <string name="please_input_password">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="register">新用户注册</string>
+    <string name="quick_login">快捷登录</string>
 </resources>
 

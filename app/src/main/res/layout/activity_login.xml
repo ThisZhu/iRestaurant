@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray">
+    <com.zhudi.irestaurant.mine.view.CircleImageView
+        android:src="@drawable/touxiang1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+    <EditText
+        android:id="@+id/edittext_please_input_phone"
+        android:text="@string/please_input_phone"
+        android:textColor="@color/lightgray"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <FrameLayout
+        android:id="@+id/line"
+        android:layout_below="@+id/edittext_please_input_phone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <EditText
+        android:id="@+id/edittext_please_input_password"
+        android:text="@string/please_input_password"
+        android:padding="10dp"
+        android:textColor="@color/lightgray"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/textview_login"
+        android:text="@string/login"
+        android:textColor="@color/black"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_button_rectange"
+        android:layout_below="@+id/edittext_please_input_password"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/textview_forget_password"
+        android:text="@string/forget_password"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/textview_login"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/textview_register"
+        android:text="@string/register"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/textview_login"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/textview_quick_login"
+        android:text="@string/quick_login"
+        android:textColor="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+    </RelativeLayout>
