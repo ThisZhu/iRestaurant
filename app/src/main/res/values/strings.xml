@@ -73,9 +73,31 @@
     <string name="next_step">下一步</string>
     <string name="resend">重新发送</string>
     <string name="please_input_message_code">请输入短信验证码</string>
-    <string name="please_input_new_password">请输入新密码</string>
     <string name="please_input_new_password_again">请重新输入</string>
     <string name="retrieve_password_successfully">密码设置成功!</string>
     <string name="ensure">确定</string>
+    <string name="disensure">取消</string>
+    <string name="set_account_number">账号设置</string>
+    <string name="set_head_portrait">头像设置\t></string>
+    <string name="set_beijing">背景设置\t></string>
+    <string name="set_user_name">用户名：</string>
+    <string name="set_user_name_details">极速凌云hhh</string>
+    <string name="set_password">账号密码：</string>
+    <string name="set_password_details">······</string>
+    <string name="set_personalized_signature">个性签名：</string>
+    <string name="set_personalized_signature_details">吃货的世界你不懂</string>
+    <string name="set_password_second">设置密码</string>
+    <string name="old_password">旧密码：</string>
+    <string name="new_password">新密码：</string>
+    <string name="please_input_old_password">请输入旧密码</string>
+    <string name="please_input_new_password">请输入新密码</string>
+    <string name="set_up_activity">\t\u003c \t设置</string>
+    <string name="check">检查更新</string>
+    <string name="notice_music">提醒声音</string>
+    <string name="boot">开机启动</string>
+    <string name="clear">清理缓存</string>
+    <string name="waiting_check">检查更新中，请稍后...</string>
+    <string name="check_finish_1">检查完成，已是最新版本</string>
+    <string name="check_finish_2">发现新版本，是否更新？</string>
 </resources>
 
