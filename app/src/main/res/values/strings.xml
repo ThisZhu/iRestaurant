@@ -116,5 +116,17 @@
     <string name="food_score">菜品：</string>
     <string name="food_names">黄焖鸡，金针菇</string>
     <string name="my_review_details">这家餐厅的服务真的没法说，菜又那么好吃，值得推荐！</string>
+    <string name="do_reviewing">撰写评价</string>
+    <string name="release">发布</string>
+    <string name="stars">点星星评分：</string>
+    <string name="please_input_review">请输入评价内容</string>
+    <string name="good_foods">点赞的菜品：</string>
+    <string name="add">添加</string>
+    <string name="review_peoples">285人评价</string>
+    <string name="review_stars_total">综合评星：</string>
+    <string name="total">全部</string>
+    <string name="good_reviews">好评</string>
+    <string name="bad_reviews">差评</string>
+    <string name="photo_reviews">有图</string>
 </resources>
 

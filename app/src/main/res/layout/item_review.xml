@@ -9,30 +9,40 @@
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <com.zhudi.irestaurant.mine.view.CircleImageView
+            android:id="@+id/circleimageview_touxiang"
+            android:src="@drawable/touxiang1"
+            android:layout_marginLeft="15dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
         <TextView
             android:id="@id/textview_user_name"
             android:text="@string/user_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/circleimageview_touxiang"
             android:gravity="center"
             android:textSize="17dp"
-            android:paddingLeft="25dp"
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/textview_time_review"
             android:text="@string/time_review"
+            android:layout_alignLeft="@+id/textview_user_name"
             android:gravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/textview_user_name"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/textview_user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <RatingBar
             android:id="@+id/ratingbar"
+            android:isIndicator="true"
             android:layout_marginLeft="10dp"
             android:progressTint="@color/blue"
+            android:layout_alignTop="@+id/textview_time_review"
             android:layout_toRightOf="@+id/textview_time_review"
             android:numStars="5"
-            android:rating="2"
+            android:rating="5"
             style="@style/Widget.AppCompat.RatingBar.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -55,11 +65,20 @@
             android:layout_marginRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <com.zhudi.irestaurant.mine.view.MyGridView
+            android:id="@+id/gridview_food_photos"
+            android:layout_below="@+id/textview_my_review_details"
+            android:layout_alignLeft="@+id/textview_my_review_details"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.zhudi.irestaurant.mine.view.MyGridView>
         <FrameLayout
             android:id="@+id/line2"
             android:layout_marginRight="15dp"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/textview_my_review_details"
+            android:layout_below="@id/gridview_food_photos"
             android:layout_alignLeft="@+id/textview_time_review"
             android:background="@color/blackdefine"
             android:layout_width="match_parent"
@@ -86,4 +105,4 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RelativeLayout>
-    </FrameLayout>
+</FrameLayout>

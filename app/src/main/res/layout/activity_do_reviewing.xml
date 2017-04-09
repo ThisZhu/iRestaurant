@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/lightgray"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textview_do_reviewing"
+        android:text="@string/do_reviewing"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <TextView
+        android:id="@+id/textview_disensure"
+        android:text="@string/disensure"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/shape_corner_rectangle_radian"
+        android:gravity="center"
+        android:layout_width="70dp"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/textview_release"
+        android:text="@string/release"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_gravity="right"
+        android:background="@drawable/shape_corner_rectangle_radian"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_width="70dp"
+        android:layout_height="30dp" />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textview_stars"
+                android:text="@string/stars"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RatingBar
+                android:id="@+id/ratingbar"
+                android:layout_alignTop="@+id/textview_stars"
+                android:layout_toRightOf="@+id/textview_stars"
+                android:layout_marginLeft="15dp"
+                android:numStars="5"
+                android:progressTint="@color/blue"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edittext_please_input_review"
+                android:text="@string/please_input_review"
+                android:padding="10dp"
+                android:background="@drawable/shape_button_rectange"
+                android:layout_marginTop="15dp"
+                android:gravity="top|left"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_below="@+id/textview_stars"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+            <com.zhudi.irestaurant.mine.view.MyGridView
+                android:id="@+id/gridview_food_photos_add"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="5dp"
+                android:numColumns="4"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/edittext_please_input_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/textview_good_foods"
+                android:text="@string/good_foods"
+                android:layout_below="@+id/gridview_food_photos_add"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/textview_add"
+                android:text="@string/add"
+                android:background="@drawable/shape_corner_rectangle_radian"
+                android:textColor="@color/black"
+                android:layout_marginLeft="13dp"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:layout_toRightOf="@+id/textview_good_foods"
+                android:layout_alignTop="@+id/textview_good_foods"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/textview_food_names"
+                android:text="@string/food_names"
+                android:paddingRight="25dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:gravity="center|left"
+                android:layout_below="@+id/textview_add"
+                android:layout_alignLeft="@+id/textview_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

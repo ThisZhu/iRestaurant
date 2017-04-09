@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/relativelayout_back"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/texview_back"
+            android:text="@string/back"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/texview_hot_review"
+            android:text="@string/hot_review"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativelayout_review_label"
+        android:layout_below="@+id/relativelayout_back"
+        android:layout_marginTop="1dp"
+        android:paddingBottom="20dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textvew_review_peoples"
+            android:text="@string/review_peoples"
+            android:textSize="13dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+        <TextView
+            android:id="@+id/textvew_review_stars_total"
+            android:text="@string/review_stars_total"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textSize="13dp"
+            android:layout_alignLeft="@+id/textvew_review_peoples"
+            android:textColor="@color/black"
+            android:layout_below="@+id/textvew_review_peoples"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_alignTop="@+id/textvew_review_stars_total"
+            android:layout_toRightOf="@+id/textvew_review_stars_total"
+            android:numStars="5"
+            android:layout_marginLeft="10dp"
+            android:rating="5"
+            android:progressTint="@color/blue"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textview_total"
+            android:text="@string/total"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/shape_corner_rectangle_radian_colours"
+            android:layout_below="@+id/ratingbar"
+            android:textSize="13dp"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:id="@+id/textview_good_reviews"
+            android:text="@string/good_reviews"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/shape_corner_rectangle_radian_colours"
+            android:layout_below="@+id/ratingbar"
+            android:layout_toRightOf="@+id/textview_total"
+            android:textSize="13dp"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:id="@+id/textview_bad_reviews"
+            android:text="@string/bad_reviews"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/shape_corner_rectangle_radian"
+            android:layout_below="@+id/ratingbar"
+            android:layout_toRightOf="@+id/textview_good_reviews"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:id="@+id/textview_photo_reviews"
+            android:text="@string/photo_reviews"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/shape_corner_rectangle_radian_colours"
+            android:layout_below="@+id/ratingbar"
+            android:layout_toRightOf="@+id/textview_bad_reviews"
+            android:textSize="13dp"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="20dp" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/my_review"
+        android:layout_below="@+id/relativelayout_review_label"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
