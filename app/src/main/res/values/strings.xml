@@ -153,19 +153,22 @@
     <string name="filter_seat_where_3">靠门</string>
     <string name="filter_seat_where_4">里面</string>
     <string name="filter_seat_people">人数</string>
-    <string name="filter_seat_people_1">人数</string>
-    <string name="filter_seat_people_2">单人桌</string>
-    <string name="filter_seat_people_3">双人桌</string>
-    <string name="filter_seat_people_4">六人桌</string>
-    <string name="filter_seat_people_5">八人桌</string>
-    <string name="filter_seat_people_6">十人桌</string>
-    <string name="filter_seat_people_7">十四人桌</string>
+    <string name="filter_seat_people_1">单人</string>
+    <string name="filter_seat_people_2">双人桌</string>
+    <string name="filter_seat_people_3">六人桌</string>
+    <string name="filter_seat_people_4">八人桌</string>
+    <string name="filter_seat_people_5">十人桌</string>
+    <string name="filter_seat_people_6">十二人桌</string>
+    <string name="filter_seat_people_7">十六人桌</string>
     <string name="filter_seat_people_8">十八人桌</string>
     <string name="filter_seat_box">包厢</string>
-    <string name="filter_seat_box_1">小包厢</string>
-    <string name="filter_seat_box_2">中包厢</string>
-    <string name="filter_seat_box_3">大包厢</string>
-    <string name="filter_seat_box_4">豪华包厢</string>
-    <string name="filter_seat_box_5">不包厢</string>
+    <string name="filter_seat_box_1">无包厢</string>
+    <string name="filter_seat_box_2">小包厢</string>
+    <string name="filter_seat_box_3">中包厢</string>
+    <string name="filter_seat_box_4">大包厢</string>
+    <string name="filter_seat_box_5">豪华包厢</string>
+    <string name="filter_seat_type">类型</string>
+    <string name="filter_seat_type_1">普通</string>
+    <string name="filter_seat_type_2">高档</string>
 </resources>
 

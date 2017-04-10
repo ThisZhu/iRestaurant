@@ -5,292 +5,370 @@
     android:layout_width="match_parent"
     android:background="@color/toumingdu"
     android:layout_height="match_parent">
-    <LinearLayout
-        android:background="@color/white"
-        android:layout_gravity="right"
-        android:orientation="vertical"
-        android:layout_width="300dp"
-        android:layout_height="match_parent">
         <TextView
             android:id="@+id/textview_filter"
             android:text="@string/filter"
             android:background="@color/lightgray"
             android:textColor="@color/black"
             android:textSize="20dp"
+            android:layout_gravity="right"
             android:gravity="center"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="60dp" />
-        <TextView
-            android:id="@+id/textview_filter_seat_where"
-            android:text="@string/filter_seat_where"
-            android:textColor="@color/black"
-            android:layout_marginLeft="10dp"
-            android:textSize="15dp"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipelayout"
+            android:layout_gravity="right"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="50dp"
+            android:layout_width="300dp"
+            android:background="@color/white"
+            android:layout_height="match_parent" >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/textview_filter_seat_where"
+                    android:text="@string/filter_seat_where"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/textview_filter_seat_where_1"
+                        android:text="@string/filter_seat_where_1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_margin="8dp"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_where_2"
+                        android:text="@string/filter_seat_where_2"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_where_3"
+                        android:text="@string/filter_seat_where_3"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/textview_filter_seat_where_4"
+                        android:text="@string/filter_seat_where_4"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_margin="8dp"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_where_5"
+                        android:visibility="invisible"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_where_6"
+                        android:visibility="invisible"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/textview_filter_seat_people"
+                    android:text="@string/filter_seat_people"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/textview_filter_seat_people_1"
+                        android:text="@string/filter_seat_people_1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_margin="8dp"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_people_2"
+                        android:text="@string/filter_seat_people_2"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_people_3"
+                        android:text="@string/filter_seat_people_3"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/textview_filter_seat_people_4"
+                        android:text="@string/filter_seat_people_4"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_margin="8dp"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_people_5"
+                        android:text="@string/filter_seat_people_5"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_people_6"
+                        android:text="@string/filter_seat_people_6"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/textview_filter_seat_people_7"
+                        android:text="@string/filter_seat_people_7"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_margin="8dp"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_people_8"
+                        android:text="@string/filter_seat_people_8"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_people_9"
+                        android:visibility="invisible"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/textview_filter_seat_box"
+                    android:text="@string/filter_seat_box"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/filter_seat_box_1"
+                        android:text="@string/filter_seat_box_1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_margin="8dp"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/filter_seat_box_2"
+                        android:text="@string/filter_seat_box_2"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/filter_seat_box_3"
+                        android:text="@string/filter_seat_box_3"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/filter_seat_box_4"
+                        android:text="@string/filter_seat_box_4"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_margin="8dp"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/filter_seat_box_5"
+                        android:text="@string/filter_seat_box_5"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/filter_seat_box_6"
+                        android:visibility="invisible"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/textview_filter_seat_type"
+                    android:text="@string/filter_seat_type"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/textview_filter_seat_type_1"
+                        android:text="@string/filter_seat_type_1"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_margin="8dp"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_type_2"
+                        android:text="@string/filter_seat_type_2"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/textview_filter_seat_type_3"
+                        android:visibility="invisible"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:foreground="@drawable/shape_corner_rectangle_black"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.SwipeRefreshLayout>
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
+            android:background="@color/lightgray"
+            android:layout_gravity="right|bottom"
+            android:layout_width="300dp"
             android:layout_height="50dp">
             <TextView
-                android:id="@+id/textview_filter_seat_where_1"
-                android:text="@string/filter_seat_where_1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/shape_corner_rectangle_black"
+                android:id="@+id/textview_disensure"
+                android:text="@string/disensure"
+                android:textColor="@color/red"
+                android:textSize="18dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
             <TextView
-                android:id="@+id/textview_filter_seat_where_2"
-                android:text="@string/filter_seat_where_2"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
+                android:id="@+id/textview_ensure"
+                android:text="@string/ensure"
+                android:textColor="@color/white"
+                android:background="@color/red"
+                android:textSize="18dp"
                 android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_where_3"
-                android:text="@string/filter_seat_where_3"
-                android:textColor="@color/black"
                 android:gravity="center"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-            <TextView
-                android:id="@+id/textview_filter_seat_where_4"
-                android:text="@string/filter_seat_where_4"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_where_5"
-                android:visibility="invisible"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_where_6"
-                android:visibility="invisible"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-        <TextView
-            android:id="@+id/textview_filter_seat_people"
-            android:text="@string/filter_seat_people"
-            android:textColor="@color/black"
-            android:layout_marginLeft="10dp"
-            android:textSize="15dp"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-            <TextView
-                android:id="@+id/textview_filter_seat_people_1"
-                android:text="@string/filter_seat_people_1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_people_2"
-                android:text="@string/filter_seat_people_2"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_people_3"
-                android:text="@string/filter_seat_people_3"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-            <TextView
-                android:id="@+id/textview_filter_seat_people_4"
-                android:text="@string/filter_seat_people_4"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_people_5"
-                android:text="@string/filter_seat_people_5"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_people_6"
-                android:text="@string/filter_seat_people_6"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-            <TextView
-                android:id="@+id/textview_filter_seat_people_7"
-                android:text="@string/filter_seat_people_7"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_people_8"
-                android:text="@string/filter_seat_people_8"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_people_9"
-                android:visibility="invisible"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-        <TextView
-            android:id="@+id/textview_filter_seat_where"
-            android:text="@string/filter_seat_where"
-            android:textColor="@color/black"
-            android:layout_marginLeft="10dp"
-            android:textSize="15dp"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-            <TextView
-                android:id="@+id/textview_filter_seat_where_1"
-                android:text="@string/filter_seat_where_1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_where_2"
-                android:text="@string/filter_seat_where_2"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_where_3"
-                android:text="@string/filter_seat_where_3"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-            <TextView
-                android:id="@+id/textview_filter_seat_where_4"
-                android:text="@string/filter_seat_where_4"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_margin="8dp"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_where_5"
-                android:visibility="invisible"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-            <TextView
-                android:id="@+id/textview_filter_seat_where_6"
-                android:visibility="invisible"
-                android:background="@drawable/shape_corner_rectangle_black"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </LinearLayout>
 </FrameLayout>
