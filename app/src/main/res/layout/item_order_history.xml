@@ -228,6 +228,4 @@
                 android:layout_height="25dp" />
         </FrameLayout>
         </android.support.v7.widget.CardView>
-
-
     </LinearLayout>

@@ -152,4 +152,5 @@
     <color name="toumingdu">#80000000</color><!--透明度可调颜色-->
     <color name="quantoumingdu">#00FFFFFF</color><!--透明度可调颜色,后6位为F表示偏白色，为0表示偏黑色-->
     <color name="blackdefine">#000000</color><!--自定义分割线颜色-->
+    <color name="toumingdu1">#30000000</color>
 </resources>
