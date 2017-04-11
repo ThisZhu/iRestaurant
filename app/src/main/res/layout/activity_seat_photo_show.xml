@@ -3,19 +3,53 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/toumingdu"
+    android:background="@color/black"
     android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <TextView
+        android:id="@+id/textview_back"
+        android:text="@string/back"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/textview_seat_photos"
+        android:text="@string/seat_photos"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/textview_seat_photos_counts"
+        android:text="@string/seat_photos_counts"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/gallery_big"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
     <Gallery
         android:id="@+id/gallery_big"
-        android:background="@color/black"
-        android:layout_marginTop="100dp"
+        android:background="@color/white"
+        android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="250dp" />
     <Gallery
         android:id="@+id/gallery_small"
-        android:background="@color/black"
+        android:background="@color/white"
         android:layout_below="@+id/gallery_big"
+        android:layout_marginBottom="30dp"
         android:layout_marginTop="25dp"
+        android:spacing="5dp"
         android:layout_width="70dp"
         android:layout_height="70dp"/>
 </RelativeLayout>

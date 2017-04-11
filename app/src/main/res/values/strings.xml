@@ -170,5 +170,12 @@
     <string name="filter_seat_type">类型</string>
     <string name="filter_seat_type_1">普通</string>
     <string name="filter_seat_type_2">高档</string>
+    <string name="seat_photos">桌位图集</string>
+    <string name="seat_photos_counts">1/12</string>
+    <string name="please_ensure_order">桌位订单确认</string>
+    <string name="submit">提交</string>
+    <string name="pay_result">支付结果</string>
+    <string name="reult_success">支付成功!</string>
+    <string name="reult_fail">支付失败!</string>
 </resources>
 
