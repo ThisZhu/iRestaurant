@@ -8,23 +8,23 @@
     <RelativeLayout
         android:id="@+id/relativelayout_back"
         android:background="@color/white"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="45dp">
         <TextView
             android:id="@+id/texview_back"
             android:text="@string/back"
             android:textColor="@color/black"
             android:gravity="center"
             android:background="@color/white"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_height="45dp" />
         <TextView
             android:id="@+id/texview_choose_seat"
             android:text="@string/choose_seat"
-            android:textSize="18dp"
+            android:textSize="16dp"
             android:gravity="center"
             android:textColor="@color/black"
             android:layout_centerInParent="true"
@@ -32,10 +32,10 @@
             android:layout_height="match_parent" />
     </RelativeLayout>
     <RelativeLayout
-        android:background="@drawable/touxiang2"
-        android:layout_marginTop="50dp"
+        android:background="@color/chocolate"
+        android:layout_marginTop="45dp"
         android:layout_width="match_parent"
-        android:layout_height="155dp">
+        android:layout_height="140dp">
         <TextView
             android:id="@+id/textview_search_text"
             android:text="@string/search_text"
@@ -46,7 +46,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="150dp"
             android:layout_width="match_parent"
-            android:layout_height="40dp" />
+            android:layout_height="30dp" />
         <ImageView
             android:id="@+id/icon_search"
             android:gravity="center"
@@ -68,7 +68,7 @@
             android:layout_alignTop="@+id/textview_search_text"
             android:background="@drawable/shape_filter"
             android:layout_width="100dp"
-            android:layout_height="40dp" />
+            android:layout_height="32dp" />
         <TextView
             android:id="@+id/textview_search_keyword_1"
             android:text="@string/search_keyword_1"
@@ -80,7 +80,7 @@
             android:layout_below="@+id/textview_search_text"
             android:gravity="center"
             android:layout_width="70dp"
-            android:layout_height="25dp" />
+            android:layout_height="20dp" />
         <TextView
             android:id="@+id/textview_search_keyword_2"
             android:text="@string/search_keyword_2"
@@ -91,7 +91,7 @@
             android:layout_below="@+id/textview_search_text"
             android:gravity="center"
             android:layout_width="70dp"
-            android:layout_height="25dp" />
+            android:layout_height="20dp" />
         <TextView
             android:id="@+id/textview_search_keyword_3"
             android:text="@string/search_keyword_3"
@@ -103,7 +103,7 @@
             android:layout_below="@+id/textview_search_text"
             android:gravity="center"
             android:layout_width="70dp"
-            android:layout_height="25dp" />
+            android:layout_height="20dp" />
         <TextView
             android:id="@+id/textview_search_keyword_4"
             android:text="@string/search_keyword_4"
@@ -114,7 +114,7 @@
             android:layout_below="@+id/textview_search_keyword_1"
             android:gravity="center"
             android:layout_width="70dp"
-            android:layout_height="25dp" />
+            android:layout_height="20dp" />
         <TextView
             android:id="@+id/textview_search_keyword_5"
             android:text="@string/search_keyword_5"
@@ -126,7 +126,7 @@
             android:gravity="center"
             android:layout_centerHorizontal="true"
             android:layout_width="70dp"
-            android:layout_height="25dp" />
+            android:layout_height="20dp" />
         <TextView
             android:id="@+id/textview_search_keyword_6"
             android:text="@string/search_keyword_6"
@@ -138,19 +138,19 @@
             android:gravity="center"
             android:layout_toRightOf="@+id/textview_search_keyword_5"
             android:layout_width="70dp"
-            android:layout_height="25dp" />
+            android:layout_height="20dp" />
     </RelativeLayout>
     <TextView
         android:id="@+id/textview_only_show_date_seat"
         android:text="@string/only_show_date_seat"
         android:gravity="center"
         android:textColor="@color/black"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="195dp"
         android:layout_width="match_parent"
         android:layout_height="30dp" />
     <ListView
         android:id="@+id/listview_seat"
-        android:layout_marginTop="235dp"
+        android:layout_marginTop="225dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     <RelativeLayout
@@ -191,7 +191,7 @@
             android:id="@+id/textview_next_step"
             android:text="@string/next_step"
             android:textColor="@color/black"
-            android:textSize="18dp"
+            android:textSize="17dp"
             android:gravity="center"
             android:background="@drawable/shape_button_rectange"
             android:layout_centerVertical="true"

@@ -178,5 +178,9 @@
     <string name="reult_success">支付成功!</string>
     <string name="reult_fail">支付失败!</string>
     <string name="date_and_people">选择时间和人数</string>
+    <string name="seat_select_date">时间选择</string>
+    <string name="seat_select_date_show">2017:4:27，中午，11:30</string>
+    <string name="seat_select_people">人数输入</string>
+    <string name="seat_select_people_show">10人</string>
 </resources>
 

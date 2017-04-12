@@ -7,52 +7,93 @@
     <RelativeLayout
         android:id="@+id/relativelayout_back"
         android:background="@color/white"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="45dp">
         <TextView
             android:id="@+id/texview_back"
             android:text="@string/back"
             android:textColor="@color/black"
             android:gravity="center"
             android:background="@color/white"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:layout_width="wrap_content"
             android:layout_height="50dp" />
         <TextView
             android:id="@+id/texview_choose_seat"
             android:text="@string/date_and_people"
-            android:textSize="18dp"
+            android:textSize="16dp"
             android:gravity="center"
             android:textColor="@color/black"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
     </RelativeLayout>
-    <CalendarView
-        android:id="@+id/calendarView"
+    <TextView
+        android:id="@+id/textview_seat_select_date_show"
+        android:text="@string/seat_select_date_show"
+        android:layout_below="@id/relativelayout_back"
         android:background="@color/white"
-        android:layout_marginTop="1dp"
-        android:layout_below="@+id/relativelayout_back"
-        android:layout_width="match_parent"
-        android:layout_height="346dp" />
-    <LinearLayout
-        android:layout_below="@+id/calendarView"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <com.zhudi.irestaurant.home.view.PickerScrollView
-            android:id="@+id/pickerview_1"
-            android:layout_below="@+id/calendarView"
-            android:layout_width="100dp"
-            android:layout_height="100dp" />
-        <com.zhudi.irestaurant.home.view.PickerScrollView
-            android:id="@+id/pickerview_2"
-            android:layout_below="@+id/calendarView"
-            android:layout_width="100dp"
-            android:layout_height="100dp" />
-    </LinearLayout>
+        android:gravity="left|center_vertical"
+        android:paddingLeft="15dp"
+        android:textSize="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <TextView
+        android:id="@+id/textview_seat_select_date"
+        android:text="@string/seat_select_date"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:layout_below="@+id/relativelayout_back"
+        android:background="@color/crimson"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="100dp"
+        android:layout_height="45dp" />
+    <TextView
+        android:id="@+id/textview_seat_select_people_show"
+        android:text="@string/seat_select_people_show"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="100dp"
+        android:layout_below="@id/textview_seat_select_date_show"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="17dp"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+    <TextView
+        android:id="@+id/textview_seat_select_people"
+        android:text="@string/seat_select_people"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:layout_below="@+id/textview_seat_select_date_show"
+        android:background="@color/crimson"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="100dp"
+        android:layout_height="45dp" />
+    <TextView
+        android:id="@+id/textview_next_step"
+        android:text="@string/next_step"
+        android:background="@drawable/shape_button_rectange"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textview_seat_select_people_show"
+        android:textSize="17dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_width="150dp"
+        android:layout_height="40dp" />
 </RelativeLayout>
