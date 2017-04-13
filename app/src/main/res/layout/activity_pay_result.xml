@@ -30,6 +30,17 @@
         android:layout_width="match_parent"
         android:layout_height="350dp" />
     <TextView
+        android:id="@+id/textview_pay_notice"
+        android:text="@string/pay_notice"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:layout_margin="20dp"
+        android:gravity="left"
+        android:layout_above="@+id/textview_ensure"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+    <TextView
         android:id="@+id/textview_ensure"
         android:text="@string/ensure"
         android:background="@drawable/shape_button_rectange"

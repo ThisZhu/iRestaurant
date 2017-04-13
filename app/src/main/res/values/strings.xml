@@ -182,5 +182,14 @@
     <string name="seat_select_date_show">2017:4:27，中午，11:30</string>
     <string name="seat_select_people">人数输入</string>
     <string name="seat_select_people_show">10人</string>
+    <string name="choose_food">菜单</string>
+    <string name="food_prices">¥115</string>
+    <string name="food_choose_count">2</string>
+    <string name="food_prices_1">¥115</string>
+    <string name="food_choose_details_name">宫保鸡丁</string>
+    <string name="food_choose_details_price">¥115</string>
+    <string name="food_choose_details_decription">描述：美味，可口</string>
+    <string name="please_ensure_food_order">菜品订单确认</string>
+    <string name="pay_notice">温馨提示：你还可以在10min内在我的订单中进行支付，预期订单将自动取消</string>
 </resources>
 

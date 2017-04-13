@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@color/white"
+    android:background="@color/lightgray"
     android:layout_height="match_parent">
     <RelativeLayout
         android:id="@+id/relativelayout_back"
@@ -23,77 +23,53 @@
             android:layout_height="45dp" />
         <TextView
             android:id="@+id/texview_choose_seat"
-            android:text="@string/choose_seat"
+            android:text="@string/choose_food"
             android:textSize="16dp"
             android:gravity="center"
             android:textColor="@color/black"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
-        <TextView
-            android:id="@+id/textview_filter"
-            android:text="@string/filter"
-            android:textColor="@color/white"
-            android:foreground="@drawable/shape_corner_rectangle_white"
-            android:textSize="15dp"
-            android:gravity="center"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/shape_filter"
-            android:layout_width="50dp"
-            android:layout_height="32dp" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:background="@color/chocolate"
-        android:layout_marginTop="45dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-        <TextView
-            android:id="@+id/textview_search_text"
-            android:text="@string/search_text"
-            android:textSize="15dp"
-            android:gravity="center"
-            android:background="@drawable/shape_search"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
     </RelativeLayout>
     <TextView
-        android:id="@+id/textview_only_show_date_seat"
-        android:text="@string/only_show_date_seat"
+        android:id="@+id/textview_search_text"
+        android:text="@string/search_text"
+        android:textSize="15dp"
         android:gravity="center"
-        android:textColor="@color/black"
-        android:layout_marginTop="95dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_search"
+        android:layout_below="@+id/relativelayout_back"
+        android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="30dp" />
     <ListView
-        android:id="@+id/listview_seat"
-        android:layout_marginTop="125dp"
+        android:id="@+id/listview_food"
+        android:background="@color/white"
+        android:layout_below="@+id/textview_search_text"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="60dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     <RelativeLayout
         android:id="@+id/relativelayout_next"
         android:background="@color/toumingdu"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="60dp">
         <ImageView
-            android:id="@+id/icon_seat_cart"
+            android:id="@+id/icon_food_cart"
             android:layout_marginLeft="15dp"
             android:layout_centerVertical="true"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@android:drawable/ic_menu_gallery" />
         <TextView
-            android:id="@+id/textview_seat_prices"
-            android:text="@string/seat_prices"
-            android:layout_toRightOf="@+id/icon_seat_cart"
+            android:id="@+id/textview_food_prices"
+            android:text="@string/food_prices"
+            android:layout_toRightOf="@+id/icon_food_cart"
             android:layout_marginLeft="10dp"
             android:textSize="25dp"
             android:textColor="@color/white"
@@ -101,14 +77,14 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
         <TextView
-            android:id="@+id/textview_seat_choose_count"
-            android:text="@string/seat_choose_count"
+            android:id="@+id/textview_food_choose_count"
+            android:text="@string/food_choose_count"
             android:gravity="center"
             android:textSize="12dp"
             android:textColor="@color/white"
             android:background="@drawable/shape_corner_circular_red"
-            android:layout_alignRight="@+id/icon_seat_cart"
-            android:layout_alignTop="@+id/icon_seat_cart"
+            android:layout_alignRight="@+id/icon_food_cart"
+            android:layout_alignTop="@+id/icon_food_cart"
             android:layout_width="20dp"
             android:layout_height="20dp" />
         <TextView
@@ -125,16 +101,16 @@
             android:layout_height="40dp" />
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/relativelayout_seat_choose_details"
+        android:id="@+id/relativelayout_food_choose_details"
         android:background="@color/white"
-        android:layout_gravity="bottom"
-        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
         android:visibility="gone"
+        android:layout_marginBottom="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.zhudi.irestaurant.mine.view.MyGridView
-            android:id="@+id/gridview_seat_choose_details"
+            android:id="@+id/gridview_food_choose_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </RelativeLayout>
-</FrameLayout>
+</RelativeLayout>

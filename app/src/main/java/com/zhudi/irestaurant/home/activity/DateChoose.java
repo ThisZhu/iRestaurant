@@ -74,12 +74,12 @@ public class DateChoose extends Activity {
         textview_seat_select_people_show=(TextView)findViewById(R.id.textview_seat_select_people_show);
         textview_next_step=(TextView)findViewById(R.id.textview_next_step);
         textview_seat_select_date_show.setText(getSysNowDate()+ "，下午，18:00");
-        alertDialog=new AlertDialog.Builder(DateChoose.this).create();
+        alertDialog=new AlertDialog.Builder(DateChoose.this).setCancelable(false).create();
         alertDialog.setView(frameLayout);
-        alertDialog1=new AlertDialog.Builder(DateChoose.this).setSingleChoiceItems(Ltime,1,onClickListener5).create();
-        alertDialog2=new AlertDialog.Builder(DateChoose.this).setSingleChoiceItems(Stime1,1,onClickListener6).create();
-        alertDialog3=new AlertDialog.Builder(DateChoose.this).setSingleChoiceItems(Stime2,1,onClickListener7).create();
-        alertDialog4=new AlertDialog.Builder(DateChoose.this).create();
+        alertDialog1=new AlertDialog.Builder(DateChoose.this).setCancelable(false).setSingleChoiceItems(Ltime,1,onClickListener5).create();
+        alertDialog2=new AlertDialog.Builder(DateChoose.this).setCancelable(false).setSingleChoiceItems(Stime1,1,onClickListener6).create();
+        alertDialog3=new AlertDialog.Builder(DateChoose.this).setCancelable(false).setSingleChoiceItems(Stime2,1,onClickListener7).create();
+        alertDialog4=new AlertDialog.Builder(DateChoose.this).setCancelable(false).create();
         alertDialog4.setTitle("请输入人数");
         alertDialog4.setView(editText);
     }
@@ -164,6 +164,7 @@ public class DateChoose extends Activity {
             intent.setClass(DateChoose.this,SeatChoose.class);
             DateChoose.this.finish();
             DateChoose.this.startActivity(intent);
+            overridePendingTransition(R.anim.start_to_left,R.anim.exit_no_change);
         }
     };
 
@@ -260,8 +261,10 @@ public class DateChoose extends Activity {
     DialogInterface.OnClickListener onClickListener10=new DialogInterface.OnClickListener(){
         @Override
         public void onClick(DialogInterface dialogInterface, int i) {
-            pickerBean.setPeoplecount(editText.getText().toString());
-            textview_seat_select_people_show.setText(pickerBean.getPeoplecount()+"人");
+            if(!editText.getText().toString().equals("")&&editText.getText()!=null) {
+                pickerBean.setPeoplecount(editText.getText().toString());
+                textview_seat_select_people_show.setText(pickerBean.getPeoplecount() + "人");
+            }
         }
     };
 
