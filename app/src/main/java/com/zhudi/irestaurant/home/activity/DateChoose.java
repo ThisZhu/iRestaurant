@@ -52,8 +52,8 @@ public class DateChoose extends Activity {
     };
     @Override
     protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_date);
+        super.onCreate(savedInstanceState);
         initView();
         ititData();
         initListener();
@@ -162,7 +162,6 @@ public class DateChoose extends Activity {
         public void onClick(View view) {
             Intent intent=new Intent();
             intent.setClass(DateChoose.this,SeatChoose.class);
-            DateChoose.this.finish();
             DateChoose.this.startActivity(intent);
             overridePendingTransition(R.anim.start_to_left,R.anim.exit_no_change);
         }
