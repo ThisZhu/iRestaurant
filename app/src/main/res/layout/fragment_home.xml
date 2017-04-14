@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/swipelayout">
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -208,6 +212,7 @@
             </LinearLayout>
         </LinearLayout>
         <FrameLayout
+            android:id="@+id/framelayout_discount"
             android:layout_marginTop="5dp"
             android:background="@color/lightgray"
             android:layout_width="match_parent"
@@ -251,6 +256,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp">
                     <FrameLayout
+                        android:id="@+id/framelayout_seat_order"
                         android:layout_gravity="center"
                         android:background="@drawable/shape_corner_circular"
                         android:layout_width="100dp"
@@ -278,6 +284,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp">
                     <FrameLayout
+                        android:id="@+id/framelayout_food_order"
                         android:layout_gravity="center"
                         android:background="@drawable/shape_corner_circular"
                         android:layout_width="100dp"
@@ -305,6 +312,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp">
                     <FrameLayout
+                        android:id="@+id/framelayout_hot_review"
                         android:layout_gravity="center"
                         android:background="@drawable/shape_corner_circular"
                         android:layout_width="100dp"
@@ -323,6 +331,7 @@
             </FrameLayout>
         </LinearLayout>
         <FrameLayout
+            android:id="@+id/framelayout_about_restaurant"
             android:background="@color/lightgray"
             android:layout_width="match_parent"
             android:layout_height="150dp">
@@ -364,4 +373,5 @@
             android:layout_height="0px">
         </android.support.v4.view.ViewPager>
     </LinearLayout>
+    </ScrollView>
 </android.support.v4.widget.SwipeRefreshLayout>

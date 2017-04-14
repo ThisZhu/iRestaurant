@@ -1,4 +1,4 @@
-package com.zhudi.irestaurant.home.activity;
+package com.zhudi.irestaurant;
 
 import android.content.DialogInterface;
 import android.view.View;

@@ -6,14 +6,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".home.activity.DateChoose"
-            android:label="activity_DateChoose">
+        <activity android:name=".MainActivity"
+            android:label="activity_MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".home.activity.DateChoose"
+            android:label="activity_DateChoose"/>
         <activity
             android:name=".home.activity.SeatChoose"
             android:label="activity_SeatChoose"/>

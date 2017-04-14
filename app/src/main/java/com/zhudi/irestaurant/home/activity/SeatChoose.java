@@ -1,6 +1,5 @@
 package com.zhudi.irestaurant.home.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.zhudi.irestaurant.BaseActivity;
+import com.zhudi.irestaurant.IActivity;
 import com.zhudi.irestaurant.R;
 
 /**
@@ -65,7 +66,7 @@ public class SeatChoose extends BaseActivity implements IActivity {
     View.OnClickListener onClickListener=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Log.w("activity finish","ss");
+            Log.w("activity finish","s");
             Intent intent = new Intent();
             intent.setClass(SeatChoose.this, DateChoose.class);
             SeatChoose.this.startActivity(intent);
