@@ -1,5 +1,7 @@
 package com.zhudi.irestaurant.home.fragment;
 
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
+import com.zhudi.irestaurant.CallBack;
 import com.zhudi.irestaurant.IActivity;
 import com.zhudi.irestaurant.R;
 import com.zhudi.irestaurant.home.activity.DateChoose;
@@ -114,4 +117,5 @@ public class HomeFragment extends Fragment implements IActivity{
             getActivity().overridePendingTransition(R.anim.start_to_left,R.anim.exit_no_change);
         }
     };
+
 }

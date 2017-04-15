@@ -7,6 +7,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
+            android:launchMode="singleInstance"
             android:label="activity_MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

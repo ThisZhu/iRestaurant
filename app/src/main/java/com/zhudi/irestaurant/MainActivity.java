@@ -1,11 +1,15 @@
 package com.zhudi.irestaurant;
 
+import android.annotation.TargetApi;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.ViewGroup;
@@ -20,11 +24,12 @@ import java.util.ArrayList;
 /**
  * Created by zhudi on 2017/4/14.
  */
-public class MainActivity extends BaseFragmentActivity implements IActivity {
+public class MainActivity extends BaseFragmentActivity implements IActivity,CallBack {
     private ArrayList<Fragment> arrayListFrag;
     private ViewPager viewPager;
     private mFragmentAdapter adapter;
     private TabLayout tabLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -36,13 +41,14 @@ public class MainActivity extends BaseFragmentActivity implements IActivity {
     @Override
     public void initView() {
         arrayListFrag=new ArrayList<>();
-        arrayListFrag.add(MineSignedFragment.getInstance());
-        arrayListFrag.add(OrderFragment.getInstance());
-        arrayListFrag.add(MineNoSignFragment.getInstance());
+        arrayListFrag.add(0,HomeFragment.getInstance());
+        arrayListFrag.add(1,OrderFragment.getInstance());
+        arrayListFrag.add(2,MineNoSignFragment.getInstance());
         viewPager=$(R.id.viewpager);
         tabLayout=$(R.id.tablayout);
         adapter=new mFragmentAdapter(getSupportFragmentManager(),arrayListFrag);
         viewPager.setAdapter(adapter);
+        viewPager.setOffscreenPageLimit(3);
         tabLayout.setupWithViewPager(viewPager);
     }
 
@@ -55,13 +61,26 @@ public class MainActivity extends BaseFragmentActivity implements IActivity {
     public void initListener() {
     }
 
+    @Override
+    public void changeFragment(boolean isSign) {
+        if(isSign) {
+            Log.e("call","started");;
+            arrayListFrag.set(2, MineSignedFragment.getInstance());
+            adapter.notifyDataSetChanged();
+        }
+        else {
+            arrayListFrag.set(2, MineNoSignFragment.getInstance());
+            adapter.notifyDataSetChanged();
+        }
+    }
+
     class mFragmentAdapter extends FragmentPagerAdapter {
         private ArrayList<Fragment> frag;
-        private String[] tabtitles={"首页","订单","我的"};
+        private String[] tabtitles = {"首页", "订单", "我的"};
 
-        public mFragmentAdapter(FragmentManager fragmentManager,ArrayList<Fragment> frag){
+        public mFragmentAdapter(FragmentManager fragmentManager, ArrayList<Fragment> frag) {
             super(fragmentManager);
-            this.frag=frag;
+            this.frag = frag;
         }
 
         @Override
@@ -75,14 +94,9 @@ public class MainActivity extends BaseFragmentActivity implements IActivity {
         }
 
         @Override
-        public CharSequence getPageTitle(int position){
-            Log.e("CharSequence",String.valueOf(position));
+        public CharSequence getPageTitle(int position) {
+            Log.e("CharSequence", String.valueOf(position));
             return tabtitles[position];
         }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {}
     }
-
-
 }

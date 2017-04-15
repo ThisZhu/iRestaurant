@@ -1,5 +1,7 @@
 package com.zhudi.irestaurant.mine.fragment;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -8,7 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.zhudi.irestaurant.CallBack;
 import com.zhudi.irestaurant.IActivity;
+import com.zhudi.irestaurant.MainActivity;
 import com.zhudi.irestaurant.R;
 
 /**
@@ -17,10 +21,18 @@ import com.zhudi.irestaurant.R;
 public class MineNoSignFragment extends Fragment implements IActivity {
     private static MineNoSignFragment mineNoSignFragment;
     private TextView textview_sign_register;
+    CallBack callBack;
+
     public static MineNoSignFragment getInstance(){
         if(mineNoSignFragment==null)
             mineNoSignFragment=new MineNoSignFragment();
         return mineNoSignFragment;
+    }
+
+    @Override
+    public void onAttach(Context context){
+        super.onAttach(context);
+        callBack=(CallBack)context;
     }
 
     @Override
@@ -33,14 +45,14 @@ public class MineNoSignFragment extends Fragment implements IActivity {
     @Override
     public void onViewCreated(View view,Bundle savedInstanceState){
         super.onViewCreated(view,savedInstanceState);
-        //initView(view);
+        initView(view);
     }
 
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
-        //initData();
+        initData();
     }
 
     /**
@@ -50,7 +62,7 @@ public class MineNoSignFragment extends Fragment implements IActivity {
     @Override
     public void onStart(){
         super.onStart();
-        //initListener();
+        initListener();
     }
 
 
@@ -82,6 +94,8 @@ public class MineNoSignFragment extends Fragment implements IActivity {
     View.OnClickListener onClickListener_sign_rigster=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            Log.e("call","start");
+            callBack.changeFragment(true);
         }
     };
 }

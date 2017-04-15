@@ -14,8 +14,7 @@
             android:layout_marginTop="35dp"
             android:foreground="@drawable/shape_corner_circular_stroke"
             android:src="@drawable/touxiang3"
-            android:layout_width="80dp"
-            android:layout_height="80dp" />
+            android:layout_width="80dp"            android:layout_height="80dp" />
         <TextView
             android:id="@+id/textview_sign_register"
             android:text="@string/sign_register"
