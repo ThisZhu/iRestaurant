@@ -9,7 +9,7 @@
     android:orientation="vertical">
     <FrameLayout
         android:id="@+id/framelayout_beijing"
-        android:background="@drawable/beijing"
+        android:background="@color/chartreuse"
         android:layout_width="match_parent"
         android:layout_height="200dp">
         <com.zhudi.irestaurant.mine.view.CircleImageView
@@ -17,7 +17,7 @@
             android:layout_gravity="center_horizontal|top"
             android:layout_marginTop="35dp"
             android:foreground="@drawable/shape_corner_circular_stroke"
-            android:src="@drawable/touxiang2"
+            android:src="@drawable/touxiang3"
             android:layout_width="80dp"
             android:layout_height="80dp" />
         <TextView

@@ -5,6 +5,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,7 @@ public class OrderFragment extends Fragment implements IActivity {
 
     @Override
     public void onViewCreated(View view,Bundle savedInstanceState){
+        Log.e("Order","onCreateView");
         super.onViewCreated(view,savedInstanceState);
         initView(view);
     }
@@ -56,6 +58,12 @@ public class OrderFragment extends Fragment implements IActivity {
         initListener();
     }
 
+
+    @Override
+    public  void onDestroyView() {
+        super.onDestroyView();
+        Log.e("Order","destroy");
+    }
 
     @Override
     public void initView() {

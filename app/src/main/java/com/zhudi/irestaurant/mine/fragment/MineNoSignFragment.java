@@ -2,6 +2,7 @@ package com.zhudi.irestaurant.mine.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,21 +25,22 @@ public class MineNoSignFragment extends Fragment implements IActivity {
 
     @Override
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle savedInstanceState){
-        View view=layoutInflater.inflate(R.layout.fragment_no_sign,viewGroup,false);
+        Log.e("Mine","onCreateView");
+        View view = layoutInflater.inflate(R.layout.fragment_no_sign, viewGroup, false);
         return view;
     }
 
     @Override
     public void onViewCreated(View view,Bundle savedInstanceState){
         super.onViewCreated(view,savedInstanceState);
-        initView(view);
+        //initView(view);
     }
 
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
-        initData();
+        //initData();
     }
 
     /**
@@ -48,7 +50,14 @@ public class MineNoSignFragment extends Fragment implements IActivity {
     @Override
     public void onStart(){
         super.onStart();
-        initListener();
+        //initListener();
+    }
+
+
+    @Override
+    public  void onDestroyView() {
+        super.onDestroyView();
+        Log.e("Mine","destroy");
     }
 
     @Override

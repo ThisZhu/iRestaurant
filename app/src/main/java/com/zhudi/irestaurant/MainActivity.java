@@ -5,10 +5,14 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.ViewGroup;
 
 import com.zhudi.irestaurant.home.fragment.HomeFragment;
 import com.zhudi.irestaurant.mine.fragment.MineNoSignFragment;
+import com.zhudi.irestaurant.mine.fragment.MineSignedFragment;
 import com.zhudi.irestaurant.order.fragment.OrderFragment;
 
 import java.util.ArrayList;
@@ -32,7 +36,7 @@ public class MainActivity extends BaseFragmentActivity implements IActivity {
     @Override
     public void initView() {
         arrayListFrag=new ArrayList<>();
-        arrayListFrag.add(HomeFragment.getInstance());
+        arrayListFrag.add(MineSignedFragment.getInstance());
         arrayListFrag.add(OrderFragment.getInstance());
         arrayListFrag.add(MineNoSignFragment.getInstance());
         viewPager=$(R.id.viewpager);
@@ -51,7 +55,7 @@ public class MainActivity extends BaseFragmentActivity implements IActivity {
     public void initListener() {
     }
 
-    class mFragmentAdapter extends FragmentPagerAdapter{
+    class mFragmentAdapter extends FragmentPagerAdapter {
         private ArrayList<Fragment> frag;
         private String[] tabtitles={"首页","订单","我的"};
 
@@ -72,8 +76,12 @@ public class MainActivity extends BaseFragmentActivity implements IActivity {
 
         @Override
         public CharSequence getPageTitle(int position){
+            Log.e("CharSequence",String.valueOf(position));
             return tabtitles[position];
         }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {}
     }
 
 

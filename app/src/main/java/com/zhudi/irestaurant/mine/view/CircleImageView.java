@@ -49,7 +49,7 @@ public class CircleImageView extends ImageView {
             final Rect rectDest = new Rect(0,0,getWidth(),getHeight());
             paint.reset();
             canvas.drawBitmap(b, rectSrc, rectDest, paint);
-            drawBorder(canvas, bitmap.getWidth(), bitmap.getHeight());
+            //drawBorder(canvas, bitmap.getWidth(), bitmap.getHeight());
         } else {
             super.onDraw(canvas);
         }
