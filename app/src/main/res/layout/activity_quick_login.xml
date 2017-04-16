@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="50dp" />
     <com.zhudi.irestaurant.mine.view.CircleImageView
-        android:src="@drawable/touxiang1"
+        android:src="@drawable/touxiang3"
         android:layout_alignParentTop="true"
         android:layout_marginTop="80dp"
         android:layout_centerHorizontal="true"

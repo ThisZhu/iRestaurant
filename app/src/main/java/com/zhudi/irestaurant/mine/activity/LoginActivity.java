@@ -98,7 +98,7 @@ public class LoginActivity extends BaseActivity implements IActivity {
     View.OnClickListener OnClickListener_login=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            goToOtherClass(intent,LoginActivity.this,MainActivity.class,-1);
         }
     };
 
@@ -112,7 +112,7 @@ public class LoginActivity extends BaseActivity implements IActivity {
     View.OnClickListener OnClickListener_register=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            goToOtherClass(intent,LoginActivity.this,RegisterActivity_1.class,-1);
         }
     };
 

@@ -100,7 +100,7 @@ public class QuickLoginActivity extends BaseActivity implements IActivity {
     View.OnClickListener OnClickListener_register=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-
+            goToOtherClass(intent,QuickLoginActivity .this,RegisterActivity_1.class,-1);
         }
     };
 

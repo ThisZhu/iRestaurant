@@ -25,27 +25,40 @@
         <activity
             android:name=".mine.activity.LoginActivity"
             android:launchMode="singleInstance"
-            android:label="activity_LoginActivity"/>
+            android:label="LoginActivity"/>
         <activity
             android:name=".mine.activity.QuickLoginActivity"
             android:launchMode="singleInstance"
-            android:label="activity_QuickLoginActivity"/>
+            android:label="QuickLoginActivity"/>
         <activity
             android:name=".mine.activity.RetrievePasswordActivity_1"
             android:launchMode="singleInstance"
-            android:label="activity_QuickLoginActivity"/>
+            android:label="RetrievePasswordActivity_1"/>
         <activity
             android:name=".mine.activity.RetrievePasswordActivity_2"
             android:launchMode="singleInstance"
-            android:label="activity_QuickLoginActivity"/>
+            android:label="RetrievePasswordActivity_2"/>
         <activity
             android:name=".mine.activity.RetrievePasswordActivity_3"
             android:launchMode="singleInstance"
-            android:label="activity_QuickLoginActivity"/>
+            android:label="RetrievePasswordActivity_3"/>
         <activity
             android:name=".mine.activity.RetrievePasswordActivity_4"
             android:launchMode="singleInstance"
-            android:label="activity_QuickLoginActivity"/>
+            android:label="RetrievePasswordActivity_4"/>
+        android:label="activity_QuickLoginActivity"/>
+        <activity
+            android:name=".mine.activity.RegisterActivity_1"
+            android:launchMode="singleInstance"
+            android:label="RegisterActivity_1"/>
+        <activity
+            android:name=".mine.activity.RegisterActivity_2"
+            android:launchMode="singleInstance"
+            android:label="RegisterActivity_2"/>
+        <activity
+            android:name=".mine.activity.RegisterActivity_3"
+            android:launchMode="singleInstance"
+            android:label="RegisterActivity_3"/>
     </application>
 
 </manifest>
