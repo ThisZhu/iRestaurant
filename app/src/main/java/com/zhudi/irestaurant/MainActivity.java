@@ -1,23 +1,14 @@
 package com.zhudi.irestaurant;
 
-import android.annotation.TargetApi;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.ViewGroup;
-
 import com.zhudi.irestaurant.home.fragment.HomeFragment;
 import com.zhudi.irestaurant.mine.fragment.MineNoSignFragment;
-import com.zhudi.irestaurant.mine.fragment.MineSignedFragment;
 import com.zhudi.irestaurant.order.fragment.OrderFragment;
 
 import java.util.ArrayList;

@@ -1,22 +1,28 @@
 package com.zhudi.irestaurant.home.fragment;
 
+import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import com.zhudi.irestaurant.CallBack;
 import com.zhudi.irestaurant.IActivity;
 import com.zhudi.irestaurant.R;
 import com.zhudi.irestaurant.home.activity.DateChoose;
+
+import java.util.ArrayList;
 
 /**
  * Created by zhudi on 2017/4/3.
@@ -35,6 +41,12 @@ public class HomeFragment extends Fragment implements IActivity{
     public FrameLayout framelayout_about_restaurant;
     public TabLayout tablayout_hot_fragment;
     public ViewPager viewpager_hot_fragment;
+    private PagerAdapter adapter;
+    private ListView listview_guess_you_like;
+    private ListView listview_my_colections_from_guess;
+    private LinearLayout linearLayout_guess_you_like;
+    private LinearLayout linearLayout_my_colections_from_guess;
+    private ArrayList<LinearLayout> listView;
 
     public static HomeFragment getInstance(){
         if(fragment==null){
@@ -96,6 +108,19 @@ public class HomeFragment extends Fragment implements IActivity{
         framelayout_about_restaurant=(FrameLayout) view.findViewById(R.id.framelayout_about_restaurant);
         tablayout_hot_fragment=(TabLayout) view.findViewById(R.id.tablayout_hot_fragment);
         viewpager_hot_fragment=(ViewPager) view.findViewById(R.id.viewpager_hot_fragment);
+        linearLayout_guess_you_like=(LinearLayout)LayoutInflater.from(getContext()).
+                inflate(R.layout.listview_guess_you_like,null);
+        linearLayout_guess_you_like.setBackgroundColor(Color.RED);
+        linearLayout_my_colections_from_guess=(LinearLayout)LayoutInflater.from(getContext()).
+                inflate(R.layout.listview_my_collections_from_guess,null);
+        listView=new ArrayList<>();
+        listView.add(linearLayout_guess_you_like);
+        listView.add(linearLayout_my_colections_from_guess);
+        Log.e("width",String.valueOf(linearLayout_guess_you_like.getHeight()));
+        adapter=new mAdapter(listView);
+        viewpager_hot_fragment.setAdapter(adapter);
+        viewpager_hot_fragment.setOffscreenPageLimit(2);
+        tablayout_hot_fragment.setupWithViewPager(viewpager_hot_fragment);
     }
 
     @Override
@@ -118,5 +143,42 @@ public class HomeFragment extends Fragment implements IActivity{
             getActivity().finish();
         }
     };
+
+    class mAdapter extends PagerAdapter{
+        private ArrayList<LinearLayout> listView;
+        private String[] title = {"猜你喜欢", "我的收藏"};
+        private LinearLayout linealayout;
+
+        public mAdapter(ArrayList<LinearLayout> listView){
+            this.listView=listView;
+        }
+
+        public LinearLayout getItem(int position) {
+            return listView.get(position);
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            linealayout=getItem(position);
+            container.addView(linealayout);
+            return linealayout;
+        }
+
+        @Override
+        public int getCount() {
+            return listView.size();
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
+            return false;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            Log.e("CharSequence", String.valueOf(position));
+            return title[position];
+        }
+    }
 
 }
