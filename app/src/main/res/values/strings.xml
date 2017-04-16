@@ -191,5 +191,6 @@
     <string name="food_choose_details_decription">描述：美味，可口</string>
     <string name="please_ensure_food_order">菜品订单确认</string>
     <string name="pay_notice">温馨提示：你还可以在10min内在我的订单中进行支付，预期订单将自动取消</string>
+    <string name="digits">0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM</string>
 </resources>
 

@@ -23,18 +23,18 @@ import com.zhudi.irestaurant.home.activity.DateChoose;
  */
 public class HomeFragment extends Fragment implements IActivity{
     private static HomeFragment fragment;
-    private FrameLayout framelayout_seat_order;
-    private FrameLayout framelayout_food_order;
-    private FrameLayout framelayout_hot_review;
-    private FrameLayout foryou1;
-    private FrameLayout foryou2;
-    private FrameLayout foryou3;
-    private FrameLayout foryou4;
-    private FrameLayout foryou5;
-    private FrameLayout framelayout_discount;
-    private FrameLayout framelayout_about_restaurant;
-    private TabLayout tablayout_hot_fragment;
-    private ViewPager viewpager_hot_fragment;
+    public FrameLayout framelayout_seat_order;
+    public FrameLayout framelayout_food_order;
+    public FrameLayout framelayout_hot_review;
+    public FrameLayout foryou1;
+    public FrameLayout foryou2;
+    public FrameLayout foryou3;
+    public FrameLayout foryou4;
+    public FrameLayout foryou5;
+    public FrameLayout framelayout_discount;
+    public FrameLayout framelayout_about_restaurant;
+    public TabLayout tablayout_hot_fragment;
+    public ViewPager viewpager_hot_fragment;
 
     public static HomeFragment getInstance(){
         if(fragment==null){
@@ -115,6 +115,7 @@ public class HomeFragment extends Fragment implements IActivity{
             intent.setClass(getActivity(), DateChoose.class);
             getActivity().startActivity(intent);
             getActivity().overridePendingTransition(R.anim.start_to_left,R.anim.exit_no_change);
+            getActivity().finish();
         }
     };
 

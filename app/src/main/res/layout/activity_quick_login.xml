@@ -4,6 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightgray">
+    <TextView
+        android:id="@+id/texview_back"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:clickable="true"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
     <com.zhudi.irestaurant.mine.view.CircleImageView
         android:src="@drawable/touxiang1"
         android:layout_alignParentTop="true"
@@ -23,6 +32,7 @@
             android:id="@+id/edittext_please_input_phone"
             android:text="@string/please_input_phone"
             android:textColor="@color/lightgray"
+            android:inputType="phone"
             android:textSize="15dp"
             android:background="@null"
             android:layout_width="match_parent"
@@ -47,6 +57,8 @@
         android:id="@+id/edittext_please_input_message_code"
         android:text="@string/please_input_message_code"
         android:padding="10dp"
+        android:digits="@string/digits"
+        android:inputType="numberPassword"
         android:textColor="@color/lightgray"
         android:layout_below="@+id/line"
         android:layout_width="match_parent"

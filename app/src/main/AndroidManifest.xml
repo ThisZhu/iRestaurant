@@ -7,7 +7,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTask"
             android:label="activity_MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -16,10 +16,36 @@
         </activity>
         <activity
             android:name=".home.activity.DateChoose"
+            android:launchMode="singleInstance"
             android:label="activity_DateChoose"/>
         <activity
             android:name=".home.activity.SeatChoose"
+            android:launchMode="singleInstance"
             android:label="activity_SeatChoose"/>
+        <activity
+            android:name=".mine.activity.LoginActivity"
+            android:launchMode="singleInstance"
+            android:label="activity_LoginActivity"/>
+        <activity
+            android:name=".mine.activity.QuickLoginActivity"
+            android:launchMode="singleInstance"
+            android:label="activity_QuickLoginActivity"/>
+        <activity
+            android:name=".mine.activity.RetrievePasswordActivity_1"
+            android:launchMode="singleInstance"
+            android:label="activity_QuickLoginActivity"/>
+        <activity
+            android:name=".mine.activity.RetrievePasswordActivity_2"
+            android:launchMode="singleInstance"
+            android:label="activity_QuickLoginActivity"/>
+        <activity
+            android:name=".mine.activity.RetrievePasswordActivity_3"
+            android:launchMode="singleInstance"
+            android:label="activity_QuickLoginActivity"/>
+        <activity
+            android:name=".mine.activity.RetrievePasswordActivity_4"
+            android:launchMode="singleInstance"
+            android:label="activity_QuickLoginActivity"/>
     </application>
 
 </manifest>

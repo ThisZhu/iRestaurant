@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativelayout_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightgray">
+    <TextView
+        android:id="@+id/texview_back"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:clickable="true"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
     <com.zhudi.irestaurant.mine.view.CircleImageView
+        android:id="@+id/imageview_touxiang"
         android:src="@drawable/touxiang1"
         android:layout_alignParentTop="true"
         android:layout_marginTop="80dp"
@@ -14,6 +25,7 @@
     <EditText
         android:id="@+id/edittext_please_input_phone"
         android:text="@string/please_input_phone"
+        android:inputType="phone"
         android:textColor="@color/lightgray"
         android:padding="10dp"
         android:background="@color/white"
@@ -28,6 +40,8 @@
     <EditText
         android:id="@+id/edittext_please_input_password"
         android:text="@string/please_input_password"
+        android:digits="@string/digits"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:textColor="@color/lightgray"
         android:layout_below="@+id/line"

@@ -18,9 +18,9 @@ import com.zhudi.irestaurant.R;
  * Created by zhudi on 2017/4/14.
  */
 public class OrderFragment extends Fragment implements IActivity {
-    private TextView textvie_my_order;
-    private TabLayout tablayout_order_fragment;
-    private ViewPager viewpager_order_fragment;
+    public TextView textvie_my_order;
+    public TabLayout tablayout_order_fragment;
+    public ViewPager viewpager_order_fragment;
     private static OrderFragment orderFragment;
     public static OrderFragment getInstance(){
         if(orderFragment==null){

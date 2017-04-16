@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CalendarView;
@@ -15,6 +16,7 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.zhudi.irestaurant.MainActivity;
 import com.zhudi.irestaurant.R;
 import com.zhudi.irestaurant.home.bean.PickerBean;
 
@@ -25,23 +27,25 @@ import java.util.Date;
  * Created by zhudi on 2017/4/11.
  */
 public class DateChoose extends Activity {
-    private CalendarView calendarView;
-    private TextView textview_seat_select_date;
-    private TextView textview_seat_select_date_show;
-    private TextView textview_seat_select_people;
-    private TextView textview_seat_select_people_show;
-    private TextView textview_next_step;
-    private String[] Ltime=new String[]{"中午","下午"};;
-    private String[] Stime1=new String[]{"10:30","11:00","11:30","12:00","12:30","13:00","13:30"};
-    private String[] Stime2=new String[]{"17:30","18:00","18:30","19:00","19:30","20:00","20:30"};
-    private AlertDialog alertDialog;
-    private AlertDialog alertDialog1;
-    private AlertDialog alertDialog2;
-    private AlertDialog alertDialog3;
-    private AlertDialog alertDialog4;
-    private EditText editText;
+    public CalendarView calendarView;
+    public TextView texview_back;
+    public TextView textview_seat_select_date;
+    public TextView textview_seat_select_date_show;
+    public TextView textview_seat_select_people;
+    public TextView textview_seat_select_people_show;
+    public TextView textview_next_step;
+    public String[] Ltime=new String[]{"中午","下午"};;
+    public String[] Stime1=new String[]{"10:30","11:00","11:30","12:00","12:30","13:00","13:30"};
+    public String[] Stime2=new String[]{"17:30","18:00","18:30","19:00","19:30","20:00","20:30"};
+    public AlertDialog alertDialog;
+    public AlertDialog alertDialog1;
+    public AlertDialog alertDialog2;
+    public AlertDialog alertDialog3;
+    public AlertDialog alertDialog4;
+    public EditText editText;
     private PickerBean pickerBean=PickerBean.getInstance();
-    Handler handler= new Handler(){
+
+    /*Handler handler= new Handler(){
         @Override
         public void handleMessage(Message msg){
             super.handleMessage(msg);
@@ -49,7 +53,8 @@ public class DateChoose extends Activity {
             Log.w("date1",date+":::"+ getSysNowDate());
         }
 
-    };
+    };*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         setContentView(R.layout.activity_choose_date);
@@ -62,12 +67,13 @@ public class DateChoose extends Activity {
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
+        //handler.removeCallbacksAndMessages(null);
     }
     public void initView(){
         final FrameLayout frameLayout=(FrameLayout) LayoutInflater.from(this).inflate(R.layout.view_calendar,null);
         calendarView=(CalendarView)frameLayout.findViewById(R.id.calenderview) ;
         editText=(EditText)LayoutInflater.from(this).inflate(R.layout.view_seat_choose_edit,null);
+        texview_back=(TextView)findViewById(R.id.texview_back);
         textview_seat_select_date=(TextView)findViewById(R.id.textview_seat_select_date);
         textview_seat_select_date_show=(TextView)findViewById(R.id.textview_seat_select_date_show);
         textview_seat_select_people=(TextView)findViewById(R.id.textview_seat_select_people);
@@ -94,6 +100,7 @@ public class DateChoose extends Activity {
 
     public void initListener(){
         calendarView.setOnDateChangeListener(onDateChangeListener);
+        texview_back.setOnClickListener(onClickListener_texview_back);
         textview_seat_select_date.setOnClickListener(onClickListenerbutton1);
         textview_seat_select_people.setOnClickListener(onClickListenerbutton2);
         textview_next_step.setOnClickListener(onClickListenerbutton3);
@@ -138,8 +145,8 @@ public class DateChoose extends Activity {
             String date=year+"年"+month+"月"+day+"日";
             Log.w("date",date);
             PickerBean.getInstance().setShowConetnt(date);
-            Message msg = new Message();
-            handler.sendMessage(msg);
+            /*Message msg = new Message();
+            handler.sendMessage(msg);*/
         }
     };
 
@@ -164,6 +171,18 @@ public class DateChoose extends Activity {
             intent.setClass(DateChoose.this,SeatChoose.class);
             DateChoose.this.startActivity(intent);
             overridePendingTransition(R.anim.start_to_left,R.anim.exit_no_change);
+            DateChoose.this.finish();
+        }
+    };
+
+    View.OnClickListener onClickListener_texview_back=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent=new Intent();
+            intent.setClass(DateChoose.this,MainActivity.class);
+            DateChoose.this.startActivity(intent);
+            overridePendingTransition(R.anim.start_to_right,R.anim.exit_no_change);
+            DateChoose.this.finish();
         }
     };
 
@@ -267,5 +286,15 @@ public class DateChoose extends Activity {
         }
     };
 
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        if(keyCode==event.KEYCODE_BACK){
+            Intent intent=new Intent();
+            intent.setClass(DateChoose.this, MainActivity.class);
+            DateChoose.this.startActivity(intent);
+            overridePendingTransition(R.anim.start_to_right,R.anim.exit_no_change);
+            DateChoose.this.finish();
+        }
+        return true;
+    }
 }

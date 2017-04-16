@@ -1,6 +1,7 @@
 package com.zhudi.irestaurant;
 
 import android.annotation.TargetApi;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -63,15 +64,7 @@ public class MainActivity extends BaseFragmentActivity implements IActivity,Call
 
     @Override
     public void changeFragment(boolean isSign) {
-        if(isSign) {
-            Log.e("call","started");;
-            arrayListFrag.set(2, MineSignedFragment.getInstance());
-            adapter.notifyDataSetChanged();
-        }
-        else {
-            arrayListFrag.set(2, MineNoSignFragment.getInstance());
-            adapter.notifyDataSetChanged();
-        }
+
     }
 
     class mFragmentAdapter extends FragmentPagerAdapter {
@@ -98,5 +91,12 @@ public class MainActivity extends BaseFragmentActivity implements IActivity,Call
             Log.e("CharSequence", String.valueOf(position));
             return tabtitles[position];
         }
+
+        @Override
+        public void notifyDataSetChanged() {
+            super.notifyDataSetChanged();
+            Log.e("notifyDataSetChanged", "notifyDataSetChanged");
+        }
+
     }
 }

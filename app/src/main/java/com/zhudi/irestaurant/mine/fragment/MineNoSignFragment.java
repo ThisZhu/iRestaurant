@@ -1,7 +1,7 @@
 package com.zhudi.irestaurant.mine.fragment;
 
-import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -12,15 +12,16 @@ import android.widget.TextView;
 
 import com.zhudi.irestaurant.CallBack;
 import com.zhudi.irestaurant.IActivity;
-import com.zhudi.irestaurant.MainActivity;
 import com.zhudi.irestaurant.R;
+import com.zhudi.irestaurant.mine.activity.LoginActivity;
 
 /**
  * Created by zhudi on 2017/4/14.
  */
 public class MineNoSignFragment extends Fragment implements IActivity {
     private static MineNoSignFragment mineNoSignFragment;
-    private TextView textview_sign_register;
+    private Intent intent=new Intent();
+    public TextView textview_sign_register;
     CallBack callBack;
 
     public static MineNoSignFragment getInstance(){
@@ -94,8 +95,11 @@ public class MineNoSignFragment extends Fragment implements IActivity {
     View.OnClickListener onClickListener_sign_rigster=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Log.e("call","start");
             callBack.changeFragment(true);
+            intent.setClass(getActivity(), LoginActivity.class);
+            getActivity().startActivity(intent);
+            getActivity().overridePendingTransition(R.anim.start_to_left,R.anim.exit_no_change);
+            getActivity().finish();
         }
     };
 }

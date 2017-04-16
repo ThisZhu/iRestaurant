@@ -1,6 +1,8 @@
 package com.zhudi.irestaurant;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -21,5 +23,24 @@ public class BaseActivity extends AppCompatActivity {
 
     public <T extends ViewGroup> T $1(int id){
         return (T)findViewById(id);
+    }
+
+    /**
+     * 跳转到其他activity
+     * @param intent
+     * @param activity
+     * @param T
+     * @param i 设置切换动画的参数
+     */
+    public void goToOtherClass(Intent intent,Activity activity, Class T,int i){
+        intent.setClass(activity, T);
+        activity.startActivity(intent);
+        if(i==-1) {
+            activity.overridePendingTransition(R.anim.start_to_left, R.anim.exit_no_change);
+        }
+        else if(i==1){
+            activity.overridePendingTransition(R.anim.start_to_right, R.anim.exit_no_change);
+        }
+        activity.finish();
     }
 }

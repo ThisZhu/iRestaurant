@@ -3,6 +3,7 @@ package com.zhudi.irestaurant.home.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.zhudi.irestaurant.BaseActivity;
 import com.zhudi.irestaurant.IActivity;
+import com.zhudi.irestaurant.MainActivity;
 import com.zhudi.irestaurant.R;
 
 /**
@@ -71,6 +73,19 @@ public class SeatChoose extends BaseActivity implements IActivity {
             intent.setClass(SeatChoose.this, DateChoose.class);
             SeatChoose.this.startActivity(intent);
             overridePendingTransition(R.anim.start_to_right,R.anim.exit_no_change);
+            SeatChoose.this.finish();
         }
     };
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        if(keyCode==event.KEYCODE_BACK){
+            Intent intent=new Intent();
+            intent.setClass(SeatChoose.this, DateChoose.class);
+            SeatChoose.this.startActivity(intent);
+            overridePendingTransition(R.anim.start_to_right,R.anim.exit_no_change);
+            SeatChoose.this.finish();
+        }
+        return true;
+    }
 }
