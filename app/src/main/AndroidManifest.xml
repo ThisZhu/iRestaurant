@@ -46,7 +46,6 @@
             android:name=".mine.activity.RetrievePasswordActivity_4"
             android:launchMode="singleInstance"
             android:label="RetrievePasswordActivity_4"/>
-        android:label="activity_QuickLoginActivity"/>
         <activity
             android:name=".mine.activity.RegisterActivity_1"
             android:launchMode="singleInstance"
@@ -59,6 +58,14 @@
             android:name=".mine.activity.RegisterActivity_3"
             android:launchMode="singleInstance"
             android:label="RegisterActivity_3"/>
+        <activity
+            android:name=".home.activity.FoodChooseActivity"
+            android:launchMode="singleInstance"
+            android:label="FoodChooseActivity"/>
+        <activity
+            android:name=".home.activity.FoodChooseEnsureActivity"
+            android:launchMode="singleInstance"
+            android:label="FoodChooseEnsureActivityoo"/>
     </application>
 
 </manifest>

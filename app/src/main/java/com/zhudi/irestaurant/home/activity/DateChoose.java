@@ -58,7 +58,7 @@ public class DateChoose extends Activity {
         setContentView(R.layout.activity_choose_date);
         super.onCreate(savedInstanceState);
         initView();
-        ititData();
+        initData();
         initListener();
     }
 
@@ -88,7 +88,7 @@ public class DateChoose extends Activity {
         alertDialog4.setView(editText);
     }
 
-    public void ititData(){
+    public void initData(){
         calendarView.setMinDate(System.currentTimeMillis());
         pickerBean.setShowConetnt(getSysNowDate());
         pickerBean.setFlag(Ltime[1]);
