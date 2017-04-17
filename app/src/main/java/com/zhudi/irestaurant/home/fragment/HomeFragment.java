@@ -1,8 +1,5 @@
 package com.zhudi.irestaurant.home.fragment;
 
-import android.graphics.Color;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,13 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.zhudi.irestaurant.CallBack;
 import com.zhudi.irestaurant.IActivity;
 import com.zhudi.irestaurant.R;
 import com.zhudi.irestaurant.home.activity.DateChoose;
+import com.zhudi.irestaurant.home.view.mScrollView;
 
 import java.util.ArrayList;
 
@@ -40,13 +36,15 @@ public class HomeFragment extends Fragment implements IActivity{
     public FrameLayout framelayout_discount;
     public FrameLayout framelayout_about_restaurant;
     public TabLayout tablayout_hot_fragment;
+    public TabLayout tablayout_hot_fragment1;
     public ViewPager viewpager_hot_fragment;
+    public mScrollView scrollView;
     private PagerAdapter adapter;
     private ListView listview_guess_you_like;
     private ListView listview_my_colections_from_guess;
-    private LinearLayout linearLayout_guess_you_like;
-    private LinearLayout linearLayout_my_colections_from_guess;
-    private ArrayList<LinearLayout> listView;
+    private View linearLayout_guess_you_like;
+    private View linearLayout_my_colections_from_guess;
+    private ArrayList<View> listView;
 
     public static HomeFragment getInstance(){
         if(fragment==null){
@@ -59,6 +57,8 @@ public class HomeFragment extends Fragment implements IActivity{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         Log.e("Home","onCreateView");
         View view=inflater.inflate(R.layout.fragment_home,container,false);
+        linearLayout_guess_you_like=inflater.inflate(R.layout.listview_guess_you_like,container,false);
+        linearLayout_my_colections_from_guess=inflater.inflate(R.layout.listview_my_collections_from_guess,container,false);
         return view;
     }
 
@@ -96,6 +96,7 @@ public class HomeFragment extends Fragment implements IActivity{
     }
 
     public void initView(View view){
+        scrollView=(mScrollView)view.findViewById(R.id.sc);
         framelayout_seat_order=(FrameLayout) view.findViewById(R.id.framelayout_seat_order);
         framelayout_food_order=(FrameLayout) view.findViewById(R.id.framelayout_food_order);
         framelayout_hot_review=(FrameLayout) view.findViewById(R.id.framelayout_hot_review);
@@ -107,20 +108,17 @@ public class HomeFragment extends Fragment implements IActivity{
         framelayout_discount=(FrameLayout) view.findViewById(R.id.framelayout_discount);
         framelayout_about_restaurant=(FrameLayout) view.findViewById(R.id.framelayout_about_restaurant);
         tablayout_hot_fragment=(TabLayout) view.findViewById(R.id.tablayout_hot_fragment);
+        tablayout_hot_fragment1=(TabLayout) view.findViewById(R.id.tablayout_hot_fragment1);
         viewpager_hot_fragment=(ViewPager) view.findViewById(R.id.viewpager_hot_fragment);
-        linearLayout_guess_you_like=(LinearLayout)LayoutInflater.from(getContext()).
-                inflate(R.layout.listview_guess_you_like,null);
-        linearLayout_guess_you_like.setBackgroundColor(Color.RED);
-        linearLayout_my_colections_from_guess=(LinearLayout)LayoutInflater.from(getContext()).
-                inflate(R.layout.listview_my_collections_from_guess,null);
         listView=new ArrayList<>();
         listView.add(linearLayout_guess_you_like);
         listView.add(linearLayout_my_colections_from_guess);
-        Log.e("width",String.valueOf(linearLayout_guess_you_like.getHeight()));
         adapter=new mAdapter(listView);
         viewpager_hot_fragment.setAdapter(adapter);
         viewpager_hot_fragment.setOffscreenPageLimit(2);
         tablayout_hot_fragment.setupWithViewPager(viewpager_hot_fragment);
+        tablayout_hot_fragment1.setupWithViewPager(viewpager_hot_fragment);
+        scrollView.setView(tablayout_hot_fragment1);
     }
 
     @Override
@@ -145,15 +143,15 @@ public class HomeFragment extends Fragment implements IActivity{
     };
 
     class mAdapter extends PagerAdapter{
-        private ArrayList<LinearLayout> listView;
+        private ArrayList<View> listView;
         private String[] title = {"猜你喜欢", "我的收藏"};
-        private LinearLayout linealayout;
+        private View linealayout;
 
-        public mAdapter(ArrayList<LinearLayout> listView){
+        public mAdapter(ArrayList<View> listView){
             this.listView=listView;
         }
 
-        public LinearLayout getItem(int position) {
+        public View getItem(int position) {
             return listView.get(position);
         }
 
@@ -165,13 +163,18 @@ public class HomeFragment extends Fragment implements IActivity{
         }
 
         @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+            container.removeView(listView.get(position));
+        }
+
+        @Override
         public int getCount() {
             return listView.size();
         }
 
         @Override
         public boolean isViewFromObject(View view, Object object) {
-            return false;
+            return view==object;
         }
 
         @Override
