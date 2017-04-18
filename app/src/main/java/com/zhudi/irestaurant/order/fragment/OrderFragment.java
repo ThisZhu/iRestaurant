@@ -11,12 +11,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.zhudi.irestaurant.BaseFragment;
 import com.zhudi.irestaurant.IActivity;
 import com.zhudi.irestaurant.R;
+import com.zhudi.irestaurant.order.presenter.HistoryOrderItemPresenter;
+import com.zhudi.irestaurant.order.presenter.mListViewAdapter;
 import com.zhudi.irestaurant.order.presenter.mPagerAdapter;
 
 import java.util.ArrayList;
@@ -28,14 +31,15 @@ public class OrderFragment extends BaseFragment implements IActivity {
     public TabLayout tablayout_order_fragment;
     public ViewPager viewpager_order_fragment;
     private static OrderFragment orderFragment;
-    private ArrayList<View> pagerView;
-    private ArrayList<View> listView;
+    public ArrayList<View> pagerView;
+    public ArrayList<View> listView;
     private ArrayList<String> strings;
     public View view_order_now;
     public View view_order_history;
     public PagerAdapter adapter;
     public BaseAdapter baseAdapter;
     public View item_order_history;
+    public ListView listview_order_history;
 
     public static OrderFragment getInstance(){
         if(orderFragment==null){
@@ -104,8 +108,9 @@ public class OrderFragment extends BaseFragment implements IActivity {
         viewpager_order_fragment.setOffscreenPageLimit(2);
 
         listView=new ArrayList<>();
-
-
+        listview_order_history=(ListView)view_order_history.findViewById(R.id.listview_order_history);
+        baseAdapter=new mListViewAdapter(listView);
+        listview_order_history.setAdapter(baseAdapter);
     }
 
     @Override

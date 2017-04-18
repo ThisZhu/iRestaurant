@@ -15,7 +15,7 @@ public class HistoryOrdeItemBean {
     private float price1;
     private float price2;
     private ArrayList<String> seat_counts;
-    private ArrayList<Food> foods;
+    private ArrayList<FoodBean> foods;
     private static HistoryOrdeItemBean historyOrdeItemBean;
 
     public static HistoryOrdeItemBean getHistoryOrdeItemBeanInstance(){
@@ -89,33 +89,12 @@ public class HistoryOrdeItemBean {
         return seat_counts;
     }
 
-    public void setFoods(ArrayList<Food> foods){
+    public void setFoods(ArrayList<FoodBean> foods){
         this.foods=foods;
     }
 
-    public ArrayList<Food> getFoods(){
+    public ArrayList<FoodBean> getFoods(){
         return foods;
     }
-
-    class Food {
-        private String food_name;
-        private int food_count;
-        public void setFood_name(String food_name){
-            this.food_name=food_name;
-        }
-
-        public String getFood_name(){
-            return food_name;
-        }
-
-        public void setFood_count(int food_count){
-            this.food_count=food_count;
-        }
-
-        public int getFood_count(){
-            return food_count;
-        }
-    }
-
 
 }

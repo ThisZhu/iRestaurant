@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-    <com.zhudi.irestaurant.mine.view.MyGridView
-        android:id="@+id/gridview_order_history"
+    <ListView
+        android:id="@+id/listview_order_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </com.zhudi.irestaurant.mine.view.MyGridView>
+    </ListView>
 </LinearLayout>
