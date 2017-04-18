@@ -68,7 +68,7 @@ public class FoodChooseActivity extends BaseActivity implements IActivity {
     View.OnClickListener OnClickListener_back=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            goToOtherClass(intent,FoodChooseActivity.this, HomeFragment.class,1);
+            goToOtherClass(intent,FoodChooseActivity.this, MainActivity.class,1);
         }
     };
 
@@ -99,5 +99,5 @@ public class FoodChooseActivity extends BaseActivity implements IActivity {
             goToOtherClass(intent,FoodChooseActivity.this, MainActivity.class,1);
         }
         return true;
-    };
+    }
 }

@@ -40,7 +40,8 @@
     <string name="price1">总价：¥225，实付：¥225</string>
     <string name="price2">总价：¥225</string>
     <string name="not_review">未评论</string>
-    <string name="order_status">——订单状态——</string>
+    <string name="seat_order_status">桌位订单状态</string>
+    <string name="food_order_status">菜品订单状态</string>
     <string name="waiting_pay">订单已提交，等待支付</string>
     <string name="payed">订单已支付，请等待</string>
     <string name="remaining_time">剩余时间：10 min</string>
@@ -192,5 +193,9 @@
     <string name="please_ensure_food_order">菜品订单确认</string>
     <string name="pay_notice">温馨提示：你还可以在10min内在我的订单中进行支付，预期订单将自动取消</string>
     <string name="digits">0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM</string>
+    <string name="order_seat">————桌位订单————</string>
+    <string name="order_food">————菜品订单————</string>
+    <string name="seat_flag">10号桌</string>
+    <string name="help_details">欢迎使用本客户端！</string>
 </resources>
 

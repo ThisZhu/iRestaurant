@@ -66,6 +66,50 @@
             android:name=".home.activity.FoodChooseEnsureActivity"
             android:launchMode="singleInstance"
             android:label="FoodChooseEnsureActivityoo"/>
+        <activity
+            android:name=".home.activity.PayResultActivity"
+            android:launchMode="singleInstance"
+            android:label="PayResultActivity"/>
+        <activity
+            android:name=".home.activity.SeatChooseEnsureActivity"
+            android:launchMode="singleInstance"
+            android:label="SeatChooseEnsureActivity"/>
+        <activity
+            android:name=".home.activity.HotReviewActivity"
+            android:launchMode="singleInstance"
+            android:label="HotReviewActivity"/>
+        <activity
+            android:name=".mine.activity.SetAccountNumberActivity"
+            android:launchMode="singleInstance"
+            android:label="SetAccountNumberActivity"/>
+        <activity
+            android:name=".mine.activity.SetPasswordActivity"
+            android:launchMode="singleInstance"
+            android:label="SetPasswordActivity"/>
+        <activity
+            android:name=".mine.activity.MyReviewActivity"
+            android:launchMode="singleInstance"
+            android:label="MyReviewActivity"/>
+        <activity
+            android:name=".mine.activity.MyCollectionsActivity"
+            android:launchMode="singleInstance"
+            android:label="MyCollectionsActivity"/>
+        <activity
+            android:name=".mine.activity.MyCouponActivity"
+            android:launchMode="singleInstance"
+            android:label="MyCouponActivity"/>
+        <activity
+            android:name=".mine.activity.HelpActivity"
+            android:launchMode="singleInstance"
+            android:label="HelpActivity"/>
+        <activity
+            android:name=".mine.activity.SetUpActivity"
+            android:launchMode="singleInstance"
+            android:label="SetUpActivity"/>
+        <activity
+            android:name=".mine.activity.CheckActivity"
+            android:launchMode="singleInstance"
+            android:label="CheckActivity"/>
     </application>
 
 </manifest>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="wrap_content" >
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -14,9 +14,19 @@
         app:cardBackgroundColor="@color/lightgray"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
+        <TextView
+            android:text="@string/order_seat"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
         <ImageView
             android:id="@+id/icon_restaurant_now"
             android:layout_width="35dp"
+            android:layout_marginTop="35dp"
             android:layout_height="35dp"
             android:background="@drawable/abc_ic_star_black_36dp" />
         <TextView
@@ -25,6 +35,7 @@
             android:layout_marginLeft="45dp"
             android:gravity="center"
             android:textSize="23dp"
+            android:layout_marginTop="35dp"
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="35dp" />
@@ -35,19 +46,20 @@
             android:layout_marginRight="15dp"
             android:gravity="center"
             android:textSize="18dp"
+            android:layout_marginTop="35dp"
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="35dp" />
         <LinearLayout
             android:layout_gravity="top"
-            android:layout_marginTop="38dp"
+            android:layout_marginTop="73dp"
             android:background="@color/blackdefine"
             android:layout_width="match_parent"
             android:layout_height="0.4dp"/>
         <FrameLayout
             android:orientation="horizontal"
             android:layout_gravity="top"
-            android:layout_marginTop="38.2dp"
+            android:layout_marginTop="73.2dp"
             android:layout_width="match_parent"
             android:layout_height="35dp">
             <TextView
@@ -80,7 +92,7 @@
         <FrameLayout
             android:orientation="horizontal"
             android:layout_gravity="top"
-            android:layout_marginTop="73.2dp"
+            android:layout_marginTop="108.2dp"
             android:layout_width="match_parent"
             android:layout_height="35dp">
             <TextView
@@ -112,7 +124,7 @@
         </FrameLayout>
         <FrameLayout
             android:layout_gravity="top"
-            android:layout_marginTop="108.2dp"
+            android:layout_marginTop="143.2dp"
             android:layout_width="match_parent"
             android:layout_height="35dp">
             <TextView
@@ -135,70 +147,12 @@
                 android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp" />
-            <LinearLayout
-                android:layout_gravity="bottom|left"
-                android:layout_marginLeft="55dp"
-                android:background="@color/blackdefine"
-                android:layout_width="match_parent"
-                android:layout_height="0.4dp"/>
         </FrameLayout>
         <FrameLayout
-            android:layout_marginTop="143.5dp"
+            android:layout_marginTop="178.5dp"
             android:layout_gravity="top"
             android:layout_width="match_parent"
-            android:layout_height="140dp">
-            <TextView
-                android:id="@+id/textView_food_name_now"
-                android:text="@string/food_name"
-                android:textSize="15dp"
-                android:textColor="@color/black"
-                android:layout_marginLeft="55dp"
-                android:layout_gravity="left"
-                android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp" />
-            <TextView
-                android:id="@+id/textView_food_name_first_now"
-                android:text="@string/food_name_first"
-                android:textSize="15dp"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:layout_marginLeft="55dp"
-                android:layout_marginTop="35dp"
-                android:layout_gravity="top|left"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp" />
-            <TextView
-                android:id="@+id/textView_food_name_first_count_now"
-                android:text="@string/food_name_first_count"
-                android:textSize="15dp"
-                android:textColor="@color/black"
-                android:layout_marginRight="15dp"
-                android:layout_gravity="top|right"
-                android:layout_marginTop="35dp"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp" />
-            <TextView
-                android:id="@+id/textView_food_name_more"
-                android:text="@string/food_name_more"
-                android:textSize="15dp"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:layout_marginLeft="55dp"
-                android:layout_gravity="bottom|left"
-                android:layout_marginBottom="35dp"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp" />
-            <TextView
-                android:id="@+id/textView_details_now"
-                android:text="@string/details"
-                android:textSize="15dp"
-                android:textColor="@color/black"
-                android:layout_marginRight="15dp"
-                android:layout_gravity="bottom|right"
-                android:layout_marginBottom="35dp"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp" />
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:background="@color/blackdefine"
                 android:layout_gravity="bottom"
@@ -219,25 +173,25 @@
                 android:layout_height="25dp" />
         </FrameLayout>
         <TextView
-            android:text="@string/order_status"
+            android:text="@string/seat_order_status"
             android:textColor="@color/black"
             android:background="@color/white"
             android:textSize="18dp"
             android:gravity="center"
             android:layout_gravity="top"
-            android:layout_marginTop="283.2dp"
+            android:layout_marginTop="213.2dp"
             android:layout_width="match_parent"
             android:layout_height="35dp" />
         <LinearLayout
             android:layout_gravity="top"
-            android:layout_marginTop="283.2dp"
+            android:layout_marginTop="318.2dp"
             android:layout_width="match_parent"
             android:layout_height="15dp"/>
         <FrameLayout
             android:id="@+id/framelayout_waiting_pay"
             android:visibility="gone"
             android:layout_gravity="top"
-            android:layout_marginTop="333.2dp"
+            android:layout_marginTop="368.2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
@@ -292,7 +246,7 @@
             android:id="@+id/framelayout_payed"
             android:visibility="visible"
             android:layout_gravity="top"
-            android:layout_marginTop="333.2dp"
+            android:layout_marginTop="263.2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
@@ -323,7 +277,7 @@
         <FrameLayout
             android:id="@+id/framelayout_conform"
             android:layout_gravity="top"
-            android:layout_marginTop="368.2dp"
+            android:layout_marginTop="298.2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
@@ -354,26 +308,210 @@
         <TextView
             android:visibility="visible"
             android:id="@+id/textview_warn"
-            android:text="@string/warn"
+            android:text="@string/order_food"
             android:textColor="@color/black"
             android:background="@color/white"
             android:textSize="18dp"
             android:gravity="center"
             android:layout_gravity="top"
-            android:layout_marginTop="403.2dp"
+            android:layout_marginTop="333.2dp"
             android:layout_width="match_parent"
             android:layout_height="35dp" />
         <TextView
-            android:visibility="visible"
+            android:visibility="gone"
             android:id="@+id/textview_warn_details"
             android:text="@string/warn_details"
             android:gravity="left"
             android:layout_gravity="top"
-            android:layout_marginTop="438.2dp"
+            android:layout_marginTop="368.2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/icon_restaurant_now_food"
+            android:layout_width="35dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="368.2dp"
+            android:layout_height="35dp"
+            android:background="@drawable/abc_ic_star_black_36dp" />
+        <TextView
+            android:id="@+id/textView_restaurant_name_now_food"
+            android:text="@string/seat_flag"
+            android:layout_marginLeft="45dp"
+            android:gravity="center"
+            android:textSize="23dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="368.2dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/textView_order_doing"
+            android:text="@string/order_doing"
+            android:layout_gravity="right|top"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="368.2dp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <LinearLayout
+            android:layout_gravity="top"
+            android:layout_marginTop="403.2dp"
+            android:background="@color/blackdefine"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"/>
+        <TextView
+            android:id="@+id/textView_food_name_now"
+            android:text="@string/food_name"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="55dp"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="403dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/textView_food_name_first_now"
+            android:text="@string/food_name_first"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="438dp"
+            android:layout_gravity="top|left"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/textView_food_name_first_count_now"
+            android:text="@string/food_name_first_count"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="438dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/textView_food_name_more"
+            android:text="@string/food_name_more"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginLeft="55dp"
+            android:layout_gravity="top|left"
+            android:layout_marginTop="473dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/textView_details_now"
+            android:text="@string/details"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="473dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        <FrameLayout
+            android:layout_marginTop="508.5dp"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="@color/blackdefine"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="35dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"/>
+            <TextView
+                android:id="@+id/textView_not_review_now_food"
+                android:text="@string/price2"
+                android:textSize="17dp"
+                android:textColor="@color/black"
+                android:padding="2dp"
+                android:gravity="center"
+                android:layout_marginRight="17dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp" />
+        </FrameLayout>
+        <TextView
+            android:text="@string/food_order_status"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:layout_marginTop="553.2dp"
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+        <FrameLayout
+            android:id="@+id/framelayout_payed_food"
+            android:visibility="visible"
+            android:layout_gravity="top"
+            android:layout_marginTop="588.2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/icon_order_status_steps2_food"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/abc_seekbar_thumb_material" />
+            <TextView
+                android:id="@+id/textview_payed_food"
+                android:text="@string/payed"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+            <TextView
+                android:id="@+id/textview_time_payed_food"
+                android:text="@string/time_payed"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/framelayout_conform_food"
+            android:layout_gravity="top"
+            android:layout_marginTop="623.2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/icon_order_status_steps3_food"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/abc_seekbar_thumb_material" />
+            <TextView
+                android:id="@+id/textview_conform_food"
+                android:text="@string/conform"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+            <TextView
+                android:id="@+id/textview_time_conform_food"
+                android:text="@string/time_conform"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp" />
+        </FrameLayout>
     </android.support.v7.widget.CardView>
-
-
 </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+</ScrollView>

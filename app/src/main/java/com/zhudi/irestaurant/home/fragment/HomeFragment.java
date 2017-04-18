@@ -14,10 +14,12 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 
 import com.zhudi.irestaurant.BaseActivity;
+import com.zhudi.irestaurant.BaseFragment;
 import com.zhudi.irestaurant.IActivity;
 import com.zhudi.irestaurant.R;
 import com.zhudi.irestaurant.home.activity.DateChoose;
 import com.zhudi.irestaurant.home.activity.FoodChooseActivity;
+import com.zhudi.irestaurant.home.activity.HotReviewActivity;
 import com.zhudi.irestaurant.home.view.mScrollView;
 
 import java.util.ArrayList;
@@ -25,7 +27,7 @@ import java.util.ArrayList;
 /**
  * Created by zhudi on 2017/4/3.
  */
-public class HomeFragment extends Fragment implements IActivity{
+public class HomeFragment extends BaseFragment implements IActivity{
     Intent intent=new Intent();
     private static HomeFragment fragment;
     public FrameLayout framelayout_seat_order;
@@ -131,29 +133,29 @@ public class HomeFragment extends Fragment implements IActivity{
 
     @Override
     public void initListener() {
-
         framelayout_seat_order.setOnClickListener(onClickListener_seat);
         framelayout_food_order.setOnClickListener(onClickListener_food);
+        framelayout_hot_review.setOnClickListener(onClickListener_review);
     }
 
     View.OnClickListener onClickListener_seat=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent=new Intent();
-            intent.setClass(getActivity(), DateChoose.class);
-            getActivity().startActivity(intent);
-            getActivity().overridePendingTransition(R.anim.start_to_left,R.anim.exit_no_change);
-            getActivity().finish();
+            goToOtherActivity(intent,getActivity(),DateChoose.class,-1);
         }
     };
 
     View.OnClickListener onClickListener_food=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            intent.setClass(getActivity(), FoodChooseActivity.class);
-            getActivity().startActivity(intent);
-            getActivity().overridePendingTransition(R.anim.start_to_left,R.anim.exit_no_change);
-            getActivity().finish();
+            goToOtherActivity(intent,getActivity(),FoodChooseActivity.class,-1);
+        }
+    };
+
+    View.OnClickListener onClickListener_review=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            goToOtherActivity(intent,getActivity(),HotReviewActivity.class,-1);
         }
     };
 

@@ -111,6 +111,7 @@
                 android:layout_height="0.4dp"/>
         </FrameLayout>
         <TextView
+            android:id="@+id/textView_price2"
             android:text="@string/price2"
             android:textColor="@color/black"
             android:layout_gravity="right"

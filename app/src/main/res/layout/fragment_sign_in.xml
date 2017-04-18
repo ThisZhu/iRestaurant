@@ -44,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="20dp"/>
     <FrameLayout
+        android:id="@+id/framelayout_coupon"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:layout_width="match_parent"
@@ -81,6 +82,7 @@
             android:layout_height="50dp" />
     </FrameLayout>
     <FrameLayout
+        android:id="@+id/framelayout_my_review"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:layout_width="match_parent"
@@ -117,6 +119,7 @@
             android:layout_height="50dp" />
     </FrameLayout>
     <FrameLayout
+        android:id="@+id/framelayout_my_collection"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:layout_width="match_parent"
@@ -137,12 +140,6 @@
             android:layout_marginLeft="40dp"
             android:layout_width="wrap_content"
             android:layout_height="35dp" />
-        <LinearLayout
-            android:layout_marginLeft="35dp"
-            android:layout_gravity="bottom"
-            android:background="@color/blackdefine"
-            android:layout_width="match_parent"
-            android:layout_height="0.4dp"/>
         <TextView
             android:id="@+id/icon_details_my_collection"
             android:text="@string/icon_details"
@@ -153,41 +150,11 @@
             android:layout_height="50dp" />
     </FrameLayout>
     <FrameLayout
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
-        <ImageView
-            android:id="@+id/icon_my_address"
-            android:layout_gravity="center_vertical"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@drawable/abc_btn_radio_material" />
-        <TextView
-            android:id="@+id/textview_my_address"
-            android:text="@string/my_address"
-            android:textColor="@color/blackdefine"
-            android:textSize="17dp"
-            android:gravity="center"
-            android:layout_gravity="left|center_vertical"
-            android:layout_marginLeft="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp" />
-        <TextView
-            android:id="@+id/icon_details_my_address"
-            android:text="@string/icon_details"
-            android:gravity="center"
-            android:textSize="27dp"
-            android:layout_gravity="right"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
-    </FrameLayout>
-
-    <FrameLayout
         android:background="@color/lightgray"
         android:layout_width="match_parent"
         android:layout_height="20dp"/>
     <FrameLayout
+        android:id="@+id/framelayout_help"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:layout_width="match_parent"
@@ -224,6 +191,7 @@
             android:layout_height="50dp" />
     </FrameLayout>
     <FrameLayout
+        android:id="@+id/framelayout_set_up"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:layout_width="match_parent"
@@ -260,6 +228,7 @@
             android:layout_height="50dp" />
     </FrameLayout>
     <FrameLayout
+        android:id="@+id/framelayout_share"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:layout_width="match_parent"

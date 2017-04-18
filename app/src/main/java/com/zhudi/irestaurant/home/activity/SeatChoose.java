@@ -19,6 +19,7 @@ import com.zhudi.irestaurant.R;
  * Created by zhudi on 2017/4/12.
  */
 public class SeatChoose extends BaseActivity implements IActivity {
+    Intent intent = new Intent();
     TextView texview_back;
     TextView textview_search_text;
     ListView listview_seat;
@@ -62,29 +63,29 @@ public class SeatChoose extends BaseActivity implements IActivity {
 
     @Override
     public void initListener() {
-        texview_back.setOnClickListener(onClickListener);
+        texview_back.setOnClickListener(onClickListener_back);
+        textview_next_step.setOnClickListener(onClickListener_next);
     }
 
-    View.OnClickListener onClickListener=new View.OnClickListener() {
+    View.OnClickListener onClickListener_back=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Log.w("activity finish","s");
-            Intent intent = new Intent();
-            intent.setClass(SeatChoose.this, DateChoose.class);
-            SeatChoose.this.startActivity(intent);
-            overridePendingTransition(R.anim.start_to_right,R.anim.exit_no_change);
-            SeatChoose.this.finish();
+            goToOtherClass(intent,SeatChoose.this,DateChoose.class,1);
+        }
+    };
+
+    View.OnClickListener onClickListener_next=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            goToOtherClass(intent,SeatChoose.this,SeatChooseEnsureActivity.class,-1);
         }
     };
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event){
         if(keyCode==event.KEYCODE_BACK){
-            Intent intent=new Intent();
-            intent.setClass(SeatChoose.this, DateChoose.class);
-            SeatChoose.this.startActivity(intent);
-            overridePendingTransition(R.anim.start_to_right,R.anim.exit_no_change);
-            SeatChoose.this.finish();
+            goToOtherClass(intent,SeatChoose.this,DateChoose.class,1);
         }
         return true;
     }

@@ -1,14 +1,18 @@
 package com.zhudi.irestaurant;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.content.SharedPreferencesCompat;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import com.zhudi.irestaurant.home.fragment.HomeFragment;
 import com.zhudi.irestaurant.mine.fragment.MineNoSignFragment;
+import com.zhudi.irestaurant.mine.fragment.MineSignedFragment;
 import com.zhudi.irestaurant.order.fragment.OrderFragment;
 
 import java.util.ArrayList;
@@ -36,6 +40,11 @@ public class MainActivity extends BaseFragmentActivity implements IActivity,Call
         arrayListFrag.add(0,HomeFragment.getInstance());
         arrayListFrag.add(1,OrderFragment.getInstance());
         arrayListFrag.add(2,MineNoSignFragment.getInstance());
+        SharedPreferences sharedPreferences=getSharedPreferences("sign_flag", 0);
+        String flag=sharedPreferences.getString("flag","no");
+        if(flag.equals("yes")){
+            arrayListFrag.set(2, MineSignedFragment.getInstance());
+        }
         viewPager=$(R.id.viewpager);
         tabLayout=$(R.id.tablayout);
         adapter=new mFragmentAdapter(getSupportFragmentManager(),arrayListFrag);

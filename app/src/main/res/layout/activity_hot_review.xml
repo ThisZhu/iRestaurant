@@ -124,7 +124,7 @@
             android:layout_height="20dp" />
     </RelativeLayout>
     <ListView
-        android:id="@+id/my_review"
+        android:id="@+id/listview_review"
         android:layout_below="@+id/relativelayout_review_label"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"

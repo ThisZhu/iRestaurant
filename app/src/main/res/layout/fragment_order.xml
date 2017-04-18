@@ -3,26 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightgray"
+    android:background="@color/white"
     android:orientation="vertical">
-    <TextView
-        android:id="@+id/textvie_my_order"
-        android:text="@string/my_order"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"/>
-    <LinearLayout
-        android:background="@color/blackdefine"
-        android:layout_width="match_parent"
-        android:layout_height="0.2dp"/>
     <android.support.design.widget.TabLayout
         android:id="@+id/tablayout_order_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager_order_fragment"
+        android:nestedScrollingEnabled="true"
         android:layout_width="match_parent"
-        android:layout_height="0px"/>
+        android:layout_height="match_parent"/>
 </LinearLayout>
