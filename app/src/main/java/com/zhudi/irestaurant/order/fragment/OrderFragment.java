@@ -10,11 +10,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.zhudi.irestaurant.BaseFragment;
 import com.zhudi.irestaurant.IActivity;
 import com.zhudi.irestaurant.R;
+import com.zhudi.irestaurant.order.presenter.mPagerAdapter;
 
 import java.util.ArrayList;
 
@@ -25,10 +28,14 @@ public class OrderFragment extends BaseFragment implements IActivity {
     public TabLayout tablayout_order_fragment;
     public ViewPager viewpager_order_fragment;
     private static OrderFragment orderFragment;
+    private ArrayList<View> pagerView;
     private ArrayList<View> listView;
+    private ArrayList<String> strings;
     public View view_order_now;
     public View view_order_history;
     public PagerAdapter adapter;
+    public BaseAdapter baseAdapter;
+    public View item_order_history;
 
     public static OrderFragment getInstance(){
         if(orderFragment==null){
@@ -42,6 +49,7 @@ public class OrderFragment extends BaseFragment implements IActivity {
         View view=layoutInflater.inflate(R.layout.fragment_order,viewGroup,false);
         view_order_now=layoutInflater.inflate(R.layout.view_order_now,viewGroup,false);
         view_order_history=layoutInflater.inflate(R.layout.gridview_order_history,viewGroup,false);
+        item_order_history=layoutInflater.inflate(R.layout.item_order_history,viewGroup,false);
         return view;
     }
 
@@ -83,13 +91,21 @@ public class OrderFragment extends BaseFragment implements IActivity {
     public void initView(View view){
         tablayout_order_fragment=(TabLayout)view.findViewById(R.id.tablayout_order_fragment);
         viewpager_order_fragment=(ViewPager)view.findViewById(R.id.viewpager_order_fragment);
-        listView=new ArrayList<>();
-        listView.add(view_order_now);
-        listView.add(view_order_history);
-        adapter=new mAdapter(listView);
+
+        pagerView=new ArrayList<>();
+        strings=new ArrayList<>();
+        pagerView.add(view_order_now);
+        pagerView.add(view_order_history);
+        strings.add("当前");
+        strings.add("历史");
+        adapter=new mPagerAdapter(pagerView,strings);
         viewpager_order_fragment.setAdapter(adapter);
         tablayout_order_fragment.setupWithViewPager(viewpager_order_fragment);
         viewpager_order_fragment.setOffscreenPageLimit(2);
+
+        listView=new ArrayList<>();
+
+
     }
 
     @Override
@@ -101,7 +117,7 @@ public class OrderFragment extends BaseFragment implements IActivity {
     public void initListener() {
     }
 
-    class mAdapter extends PagerAdapter {
+    /*class mAdapter extends PagerAdapter {
         private ArrayList<View> listView;
         private String[] title = {"当前", "历史"};
         private View linealayout;
@@ -140,6 +156,7 @@ public class OrderFragment extends BaseFragment implements IActivity {
         public CharSequence getPageTitle(int position) {
             return title[position];
         }
-    }
+    }*/
+
 
 }
