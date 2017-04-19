@@ -13,6 +13,7 @@ import android.util.Log;
 import com.zhudi.irestaurant.home.fragment.HomeFragment;
 import com.zhudi.irestaurant.mine.fragment.MineNoSignFragment;
 import com.zhudi.irestaurant.mine.fragment.MineSignedFragment;
+import com.zhudi.irestaurant.net.NETService;
 import com.zhudi.irestaurant.order.fragment.OrderFragment;
 
 import java.util.ArrayList;

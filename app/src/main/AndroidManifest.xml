@@ -110,6 +110,8 @@
             android:name=".mine.activity.CheckActivity"
             android:launchMode="singleInstance"
             android:label="CheckActivity"/>
+        <service android:name=".net.NETService"
+            android:label="NETService"/>
     </application>
 
 </manifest>

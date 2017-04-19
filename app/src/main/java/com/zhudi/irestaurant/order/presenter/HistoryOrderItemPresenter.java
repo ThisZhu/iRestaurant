@@ -20,7 +20,6 @@ public class HistoryOrderItemPresenter  {
         this.context=context;
         this.orderFragment=orderFragment;
     }
-
     public void changeListView(){
 
     }

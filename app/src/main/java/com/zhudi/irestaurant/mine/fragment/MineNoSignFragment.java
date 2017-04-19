@@ -18,6 +18,8 @@ import com.zhudi.irestaurant.R;
 import com.zhudi.irestaurant.mine.activity.HelpActivity;
 import com.zhudi.irestaurant.mine.activity.LoginActivity;
 import com.zhudi.irestaurant.mine.activity.SetUpActivity;
+import com.zhudi.irestaurant.net.NETService;
+import com.zhudi.irestaurant.net.NetCallBack;
 
 /**
  * Created by zhudi on 2017/4/14.
@@ -29,18 +31,12 @@ public class MineNoSignFragment extends BaseFragment implements IActivity {
     public FrameLayout framelayout_help;
     public FrameLayout framelayout_set_up;
     public FrameLayout framelayout_share;
-    CallBack callBack;
+    private CallBack callBack;
 
     public static MineNoSignFragment getInstance(){
         if(mineNoSignFragment==null)
             mineNoSignFragment=new MineNoSignFragment();
         return mineNoSignFragment;
-    }
-
-    @Override
-    public void onAttach(Context context){
-        super.onAttach(context);
-        callBack=(CallBack)context;
     }
 
     @Override
@@ -130,6 +126,11 @@ public class MineNoSignFragment extends BaseFragment implements IActivity {
     View.OnClickListener onClickListener_share=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            Log.e("thread","sss");
+            intent.setClass(getActivity(),NETService.class);
+            getActivity().startService(intent);
+            callBack=(CallBack)NETService.getInstance();
+            callBack.changeFragment(true);
         }
     };
 }

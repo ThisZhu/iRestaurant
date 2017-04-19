@@ -1,5 +1,8 @@
 package com.zhudi.irestaurant.home.fragment;
 
+import android.graphics.Color;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,13 +24,15 @@ import com.zhudi.irestaurant.home.activity.DateChoose;
 import com.zhudi.irestaurant.home.activity.FoodChooseActivity;
 import com.zhudi.irestaurant.home.activity.HotReviewActivity;
 import com.zhudi.irestaurant.home.view.mScrollView;
+import com.zhudi.irestaurant.net.NETService;
+import com.zhudi.irestaurant.net.NetCallBack;
 
 import java.util.ArrayList;
 
 /**
  * Created by zhudi on 2017/4/3.
  */
-public class HomeFragment extends BaseFragment implements IActivity{
+public class HomeFragment extends BaseFragment implements IActivity,NetCallBack{
     Intent intent=new Intent();
     private static HomeFragment fragment;
     public FrameLayout framelayout_seat_order;
@@ -57,6 +62,15 @@ public class HomeFragment extends BaseFragment implements IActivity{
         }
         return fragment;
     }
+
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg){
+            foryou1.setBackgroundColor(Color.RED);
+        }
+
+    };
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -124,6 +138,7 @@ public class HomeFragment extends BaseFragment implements IActivity{
         tablayout_hot_fragment.setupWithViewPager(viewpager_hot_fragment);
         tablayout_hot_fragment1.setupWithViewPager(viewpager_hot_fragment);
         scrollView.setView(tablayout_hot_fragment1);
+
     }
 
     @Override
@@ -158,6 +173,12 @@ public class HomeFragment extends BaseFragment implements IActivity{
             goToOtherActivity(intent,getActivity(),HotReviewActivity.class,-1);
         }
     };
+
+    @Override
+    public void changeView() {
+       Message message=new Message();
+        handler.sendMessage(message);
+    }
 
     class mAdapter extends PagerAdapter{
         private ArrayList<View> listView;

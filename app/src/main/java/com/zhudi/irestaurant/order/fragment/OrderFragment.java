@@ -1,6 +1,9 @@
 package com.zhudi.irestaurant.order.fragment;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -18,6 +21,8 @@ import android.widget.TextView;
 import com.zhudi.irestaurant.BaseFragment;
 import com.zhudi.irestaurant.IActivity;
 import com.zhudi.irestaurant.R;
+import com.zhudi.irestaurant.net.NETService;
+import com.zhudi.irestaurant.net.NetCallBack;
 import com.zhudi.irestaurant.order.presenter.HistoryOrderItemPresenter;
 import com.zhudi.irestaurant.order.presenter.mListViewAdapter;
 import com.zhudi.irestaurant.order.presenter.mPagerAdapter;
@@ -27,7 +32,7 @@ import java.util.ArrayList;
 /**
  * Created by zhudi on 2017/4/14.
  */
-public class OrderFragment extends BaseFragment implements IActivity {
+public class OrderFragment extends BaseFragment implements IActivity,NetCallBack {
     public TabLayout tablayout_order_fragment;
     public ViewPager viewpager_order_fragment;
     private static OrderFragment orderFragment;
@@ -47,6 +52,14 @@ public class OrderFragment extends BaseFragment implements IActivity {
         }
         return orderFragment;
     }
+
+    private Handler handler=new Handler(){
+      @Override
+        public void handleMessage(Message msg){
+          view_order_now.setBackgroundColor(Color.RED);
+      }
+
+    };
 
     @Override
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle savedInstanceState){
@@ -120,6 +133,12 @@ public class OrderFragment extends BaseFragment implements IActivity {
 
     @Override
     public void initListener() {
+    }
+
+    @Override
+    public void changeView() {
+       Message msg=new Message();
+        handler.sendMessage(msg);
     }
 
     /*class mAdapter extends PagerAdapter {
