@@ -11,21 +11,23 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.zhudi.irestaurant.BaseActivity;
 import com.zhudi.irestaurant.BaseFragment;
 import com.zhudi.irestaurant.IActivity;
 import com.zhudi.irestaurant.R;
 import com.zhudi.irestaurant.home.activity.DateChoose;
 import com.zhudi.irestaurant.home.activity.FoodChooseActivity;
 import com.zhudi.irestaurant.home.activity.HotReviewActivity;
+import com.zhudi.irestaurant.home.presenter.AutoPagerAdapter;
 import com.zhudi.irestaurant.home.view.mScrollView;
-import com.zhudi.irestaurant.net.NETService;
 import com.zhudi.irestaurant.net.NetCallBack;
+import com.zhudi.irestaurant.order.presenter.mPagerAdapter;
 
 import java.util.ArrayList;
 
@@ -55,6 +57,15 @@ public class HomeFragment extends BaseFragment implements IActivity,NetCallBack{
     private View linearLayout_guess_you_like;
     private View linearLayout_my_colections_from_guess;
     private ArrayList<View> listView;
+    private ArrayList<String> strings;
+
+    public ViewPager viewpager_home;
+    public View view_home_page_1,view_home_page_2,view_home_page_3;
+    public ImageView icon_1,icon_2,icon_3;
+    private ArrayList<View> mView;
+    private PagerAdapter home_adapter;
+    private int flag;
+    private boolean thread_flag;
 
     public static HomeFragment getInstance(){
         if(fragment==null){
@@ -66,7 +77,7 @@ public class HomeFragment extends BaseFragment implements IActivity,NetCallBack{
     private Handler handler=new Handler(){
         @Override
         public void handleMessage(Message msg){
-            foryou1.setBackgroundColor(Color.RED);
+           changeIcon(msg.what);
         }
 
     };
@@ -78,6 +89,9 @@ public class HomeFragment extends BaseFragment implements IActivity,NetCallBack{
         View view=inflater.inflate(R.layout.fragment_home,container,false);
         linearLayout_guess_you_like=inflater.inflate(R.layout.listview_guess_you_like,container,false);
         linearLayout_my_colections_from_guess=inflater.inflate(R.layout.listview_my_collections_from_guess,container,false);
+        view_home_page_1=inflater.inflate(R.layout.view_home_page_1,container,false);
+        view_home_page_2=inflater.inflate(R.layout.view_home_page_2,container,false);
+        view_home_page_3=inflater.inflate(R.layout.view_home_page_3,container,false);
         return view;
     }
 
@@ -107,7 +121,7 @@ public class HomeFragment extends BaseFragment implements IActivity,NetCallBack{
     @Override
     public  void onDestroyView() {
         super.onDestroyView();
-        Log.e("Home","destroy");
+        thread_flag=false;
     }
 
     @Override
@@ -130,20 +144,35 @@ public class HomeFragment extends BaseFragment implements IActivity,NetCallBack{
         tablayout_hot_fragment1=(TabLayout) view.findViewById(R.id.tablayout_hot_fragment1);
         viewpager_hot_fragment=(ViewPager) view.findViewById(R.id.viewpager_hot_fragment);
         listView=new ArrayList<>();
+        strings=new ArrayList<>();
+        strings.add("猜你喜欢");
+        strings.add("我的收藏");
         listView.add(linearLayout_guess_you_like);
         listView.add(linearLayout_my_colections_from_guess);
-        adapter=new mAdapter(listView);
+        adapter=new mPagerAdapter(listView,strings);
         viewpager_hot_fragment.setAdapter(adapter);
         viewpager_hot_fragment.setOffscreenPageLimit(2);
         tablayout_hot_fragment.setupWithViewPager(viewpager_hot_fragment);
         tablayout_hot_fragment1.setupWithViewPager(viewpager_hot_fragment);
         scrollView.setView(tablayout_hot_fragment1);
 
+        viewpager_home=(ViewPager)view.findViewById(R.id.viewpager_home);
+        icon_1=(ImageView)view.findViewById(R.id.icon_1);
+        icon_2=(ImageView)view.findViewById(R.id.icon_2);
+        icon_3=(ImageView)view.findViewById(R.id.icon_3);
+        mView=new ArrayList<>();
+        mView.add(view_home_page_1);
+        mView.add(view_home_page_2);
+        mView.add(view_home_page_3);
+        home_adapter=new AutoPagerAdapter(mView);
+        viewpager_home.setAdapter(home_adapter);
+        viewpager_home.setOffscreenPageLimit(3);
     }
 
     @Override
     public void initData() {
-
+        flag=0;
+        thread_flag=true;
     }
 
     @Override
@@ -151,6 +180,9 @@ public class HomeFragment extends BaseFragment implements IActivity,NetCallBack{
         framelayout_seat_order.setOnClickListener(onClickListener_seat);
         framelayout_food_order.setOnClickListener(onClickListener_food);
         framelayout_hot_review.setOnClickListener(onClickListener_review);
+        viewpager_home.addOnPageChangeListener(onPageChangeListener);
+        if(!threadAudoPagerView.isAlive())
+            threadAudoPagerView.start();
     }
 
     View.OnClickListener onClickListener_seat=new View.OnClickListener() {
@@ -174,52 +206,75 @@ public class HomeFragment extends BaseFragment implements IActivity,NetCallBack{
         }
     };
 
+    ViewPager.OnPageChangeListener onPageChangeListener=new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+            flag=position;
+            senMessageToHandler(flag);
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+        }
+    };
+
     @Override
     public void changeView() {
-       Message message=new Message();
+    }
+
+    Thread threadAudoPagerView=new Thread(new Runnable() {
+        @Override
+        public void run() {
+            while (thread_flag) {
+                try {
+                    Thread.sleep(2000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                setCurrentPagerView(flag);
+                if(flag>=2)
+                    flag=-1;
+                ++flag;
+            }
+        }
+    });
+
+    public void setCurrentPagerView(int flag){
+        if(flag==0) {
+            viewpager_home.setCurrentItem(flag, false);
+        }
+        else {
+            viewpager_home.setCurrentItem(flag, true);
+        }
+    }
+
+    public void senMessageToHandler(int flag){
+        Message message=new Message();
+        message.what=flag;
         handler.sendMessage(message);
     }
 
-    class mAdapter extends PagerAdapter{
-        private ArrayList<View> listView;
-        private String[] title = {"猜你喜欢", "我的收藏"};
-        private View linealayout;
-
-        public mAdapter(ArrayList<View> listView){
-            this.listView=listView;
-        }
-
-        public View getItem(int position) {
-            return listView.get(position);
-        }
-
-        @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            linealayout=getItem(position);
-            container.addView(linealayout);
-            return linealayout;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object object) {
-            container.removeView(listView.get(position));
-        }
-
-        @Override
-        public int getCount() {
-            return listView.size();
-        }
-
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view==object;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            Log.e("CharSequence", String.valueOf(position));
-            return title[position];
+    public void changeIcon(int i){
+        icon_3.setImageResource(R.drawable.shape_corner_circular_white);
+        icon_2.setImageResource(R.drawable.shape_corner_circular_white);
+        icon_1.setImageResource(R.drawable.shape_corner_circular_white);
+        switch (i){
+            case 0:
+                icon_1.setImageResource(R.drawable.shape_corner_circular_orangered);
+                break;
+            case 1:
+                icon_2.setImageResource(R.drawable.shape_corner_circular_orangered);
+                break;
+            case 2:
+                icon_3.setImageResource(R.drawable.shape_corner_circular_orangered);
+                break;
+            default:
+                break;
         }
     }
-
 }

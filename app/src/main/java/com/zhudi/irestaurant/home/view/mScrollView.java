@@ -42,9 +42,9 @@ public class mScrollView extends ScrollView {
 
     @Override
     public void computeScroll() {
-        if(getScrollY()>=tabLayout.getTop()&&!tabLayout1.isShown()){
+        if(getScrollY()>=tabLayout.getTop()&&tabLayout1!=null&&!tabLayout1.isShown()){
             tabLayout1.setVisibility(VISIBLE);
-        }else if(getScrollY()<tabLayout.getTop()&&tabLayout1.isShown()){
+        }else if(getScrollY()<tabLayout.getTop()&&tabLayout1!=null&&tabLayout1.isShown()){
             tabLayout1.setVisibility(GONE);
         }
         super.computeScroll();

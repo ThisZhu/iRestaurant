@@ -104,7 +104,6 @@ public class MineNoSignFragment extends BaseFragment implements IActivity {
     View.OnClickListener onClickListener_sign_rigster=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            callBack.changeFragment(true);
             goToOtherActivity(intent,getActivity(),LoginActivity.class,-1);
         }
     };
