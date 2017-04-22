@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Transition;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,13 +34,24 @@ public class BaseActivity extends AppCompatActivity {
      * @param i 设置切换动画的参数
      */
     public void goToOtherClass(Intent intent,Activity activity, Class T,int i){
-        intent.setClass(activity, T);
-        activity.startActivity(intent);
         if(i==-1) {
+            intent.setClass(activity, T);
+            activity.startActivity(intent);
             activity.overridePendingTransition(R.anim.start_to_left, R.anim.exit_no_change);
         }
         else if(i==1){
+            intent.setClass(activity, T);
+            activity.startActivity(intent);
             activity.overridePendingTransition(R.anim.start_to_right, R.anim.exit_no_change);
+        }
+        else if (i==2){
+            intent.setClass(activity, T);
+            activity.startActivity(intent);
+            //不需要设置动画，为SeatFilterActivity打开专设，其动画在style中已经设置
+            return;
+        }
+        else if(i==3){
+            //不需要设置动画，为SeatFilterActivity退出专设，其动画在style中已经设置
         }
         activity.finish();
     }

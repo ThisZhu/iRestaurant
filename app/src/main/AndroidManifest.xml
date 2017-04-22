@@ -20,7 +20,7 @@
             android:label="activity_DateChoose"/>
         <activity
             android:name=".home.activity.SeatChoose"
-            android:launchMode="singleInstance"
+            android:launchMode="standard"
             android:label="activity_SeatChoose"/>
         <activity
             android:name=".mine.activity.LoginActivity"
@@ -112,6 +112,11 @@
             android:label="CheckActivity"/>
         <service android:name=".net.NETService"
             android:label="NETService"/>
+        <activity
+            android:name=".home.activity.SeatFilterActivity"
+            android:theme="@style/MyTheme"
+            android:launchMode="standard"
+            android:label="SeatFilterActivity"/>
     </application>
 
 </manifest>

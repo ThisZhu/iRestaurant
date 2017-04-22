@@ -1,10 +1,15 @@
 package com.zhudi.irestaurant.home.activity;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -20,17 +25,19 @@ import com.zhudi.irestaurant.R;
  */
 public class SeatChoose extends BaseActivity implements IActivity {
     Intent intent = new Intent();
-    TextView texview_back;
-    TextView textview_search_text;
-    ListView listview_seat;
-    ImageView icon_seat_cart;
-    TextView textview_seat_choose_count;
-    TextView textview_seat_prices;
-    TextView textview_next_step;
-    TextView textview_filter;
-    GridView gridview_seat_choose_details;
-    TextView textview_clear_cart;
-    ImageView icon_clear_cart;
+    public TextView texview_back;
+    public TextView textview_search_text;
+    public ListView listview_seat;
+    public ImageView icon_seat_cart;
+    public TextView textview_seat_choose_count;
+    public TextView textview_seat_prices;
+    public TextView textview_next_step;
+    public TextView textview_filter;
+    public GridView gridview_seat_choose_details;
+    public TextView textview_clear_cart;
+    public ImageView icon_clear_cart;
+    public boolean isInBackground;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         setContentView(R.layout.activity_choose_seat);
@@ -38,6 +45,14 @@ public class SeatChoose extends BaseActivity implements IActivity {
         initView();
         initData();
         initListener();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(isInBackground)
+        dimBackground(0.5f,1.0f);
+        isInBackground=false;
     }
 
     @Override
@@ -58,13 +73,14 @@ public class SeatChoose extends BaseActivity implements IActivity {
 
     @Override
     public void initData() {
-
+        isInBackground=false;
     }
 
     @Override
     public void initListener() {
         texview_back.setOnClickListener(onClickListener_back);
         textview_next_step.setOnClickListener(onClickListener_next);
+        textview_filter.setOnClickListener(onClickListener_filter);
     }
 
     View.OnClickListener onClickListener_back=new View.OnClickListener() {
@@ -75,10 +91,36 @@ public class SeatChoose extends BaseActivity implements IActivity {
         }
     };
 
+    View.OnClickListener onClickListener_filter=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            goToOtherClass(intent,SeatChoose.this,SeatFilterActivity.class,2);
+            dimBackground(1.0f,0.5f);
+            isInBackground=true;
+        }
+    };
+
     View.OnClickListener onClickListener_next=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             goToOtherClass(intent,SeatChoose.this,SeatChooseEnsureActivity.class,-1);
+        }
+    };
+
+    public void dimBackground(float from,float to){
+        ValueAnimator valueAnimator=ValueAnimator.ofFloat(from,to);
+        valueAnimator.setDuration(250);
+        valueAnimator.addUpdateListener(animListener);
+        valueAnimator.start();
+    }
+
+    ValueAnimator.AnimatorUpdateListener animListener=new ValueAnimator.AnimatorUpdateListener() {
+        @Override
+        public void onAnimationUpdate(ValueAnimator valueAnimator) {
+            final Window window=getWindow();
+            WindowManager.LayoutParams params=window.getAttributes();
+            params.alpha=(Float)valueAnimator.getAnimatedValue();
+            window.setAttributes(params);
         }
     };
 
