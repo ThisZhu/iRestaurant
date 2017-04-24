@@ -197,5 +197,6 @@
     <string name="order_food">————菜品订单————</string>
     <string name="seat_flag">10号桌</string>
     <string name="help_details">欢迎使用本客户端！</string>
+    <string name="set_password_back">\u003c \t设置密码</string>
 </resources>
 

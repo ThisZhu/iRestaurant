@@ -15,13 +15,15 @@ import com.zhudi.irestaurant.R;
  */
 public class RegisterActivity_3 extends BaseActivity implements IActivity {
     Intent intent=new Intent();
-    public TextView textview_retrieve_password_successfully;
-    public TextView textview_ensure;
+    public TextView texview_register3;
+    public TextView edittext_please_input_new_password;
+    public TextView edittext_please_input_new_password_again;
+    public TextView textview_next_step;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_4);
+        setContentView(R.layout.activity_register_3);
         initView();
         initData();
         initListener();
@@ -30,8 +32,10 @@ public class RegisterActivity_3 extends BaseActivity implements IActivity {
 
     @Override
     public void initView() {
-        textview_retrieve_password_successfully=$(R.id.textview_retrieve_password_successfully);
-        textview_ensure=$(R.id.textview_ensure);
+        texview_register3=$(R.id.texview_register3);
+        edittext_please_input_new_password=$(R.id.edittext_please_input_new_password);
+        edittext_please_input_new_password_again=$(R.id.edittext_please_input_new_password_again);
+        textview_next_step=$(R.id.textview_next_step);
     }
 
     @Override
@@ -41,20 +45,28 @@ public class RegisterActivity_3 extends BaseActivity implements IActivity {
 
     @Override
     public void initListener() {
-        textview_ensure.setOnClickListener(OnClickListener_ensure);
+        texview_register3.setOnClickListener(OnClickListener_register3);
+        textview_next_step.setOnClickListener(OnClickListener_next_step);
     }
 
-    View.OnClickListener OnClickListener_ensure=new View.OnClickListener() {
+    View.OnClickListener OnClickListener_register3=new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            goToOtherClass(intent,RegisterActivity_3.this,LoginActivity.class,-1);
+            goToOtherClass(intent,RegisterActivity_3.this,RegisterActivity_2.class,1);
+        }
+    };
+
+    View.OnClickListener OnClickListener_next_step=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            goToOtherClass(intent,RegisterActivity_3.this,RegisterActivity_4.class,-1);
         }
     };
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent keyEvent){
         if(keyCode==keyEvent.KEYCODE_BACK){
-            goToOtherClass(intent,RegisterActivity_3.this,LoginActivity.class,-1);
+            goToOtherClass(intent,RegisterActivity_3.this,RegisterActivity_2.class,1);
         }
         return true;
     }
