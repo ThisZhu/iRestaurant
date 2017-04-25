@@ -53,6 +53,12 @@ public class BaseActivity extends AppCompatActivity {
         else if(i==3){
             //不需要设置动画，为SeatFilterActivity退出专设，其动画在style中已经设置
         }
+        else if(i==4){
+            intent.setClass(activity, T);
+            activity.startActivity(intent);
+            activity.overridePendingTransition(R.anim.start_to_left, R.anim.exit_no_change);
+            return;
+        }
         activity.finish();
     }
 }

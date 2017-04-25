@@ -227,6 +227,11 @@ public class HomeFragment extends BaseFragment implements IActivity,NetCallBack{
     public void changeView() {
     }
 
+    @Override
+    public void changeView(int flag) {
+
+    }
+
     Thread threadAudoPagerView=new Thread(new Runnable() {
         @Override
         public void run() {

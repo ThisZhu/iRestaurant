@@ -141,6 +141,11 @@ public class OrderFragment extends BaseFragment implements IActivity,NetCallBack
         handler.sendMessage(msg);
     }
 
+    @Override
+    public void changeView(int flag) {
+
+    }
+
     /*class mAdapter extends PagerAdapter {
         private ArrayList<View> listView;
         private String[] title = {"当前", "历史"};

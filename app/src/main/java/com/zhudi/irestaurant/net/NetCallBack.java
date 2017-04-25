@@ -5,4 +5,5 @@ package com.zhudi.irestaurant.net;
  */
 public interface NetCallBack {
     void changeView();
+    void changeView(int flag);
 }

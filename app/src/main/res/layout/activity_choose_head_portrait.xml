@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/toumingdu"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text_camera"
+        android:background="@drawable/shape_button_rectange"
+        android:text="@string/camera"
+        android:layout_above="@+id/text_photo"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/text_photo"
+        android:text="@string/photo"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/shape_button_rectange"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/text_disensure"
+        android:text="@string/disensure"
+        android:layout_below="@+id/text_photo"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/shape_button_rectange"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+ </RelativeLayout>

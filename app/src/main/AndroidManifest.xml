@@ -84,7 +84,7 @@
             android:label="HotReviewActivity"/>
         <activity
             android:name=".mine.activity.SetAccountNumberActivity"
-            android:launchMode="singleInstance"
+            android:launchMode="standard"
             android:label="SetAccountNumberActivity"/>
         <activity
             android:name=".mine.activity.SetPasswordActivity"
@@ -121,6 +121,10 @@
             android:theme="@style/MyTheme"
             android:launchMode="standard"
             android:label="SeatFilterActivity"/>
+        <activity
+            android:name=".mine.activity.ChooseHeadPortraitActivity"
+            android:launchMode="singleInstance"
+            android:label="ChooseHeadPortraitActivity"/>
     </application>
 
 </manifest>
